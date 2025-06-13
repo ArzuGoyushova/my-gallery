@@ -1,9 +1,19 @@
 const Navbar = () => {
-    return (
-      <section id="home" className="h-screen flex items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-white text-4xl font-bold">
-        Welcome to my Portfolio ✨
-      </section>
-    );
-  };
-  
-  export default Navbar;
+  const sections = ['home', 'about', 'services', 'projects', 'tools', 'contact'];
+
+  return (
+    <nav className="fixed top-4 left-4 z-50 bg-white/20 backdrop-blur-md rounded-xl shadow-lg p-4">
+      <ul className="space-y-2 text-sm font-medium text-white">
+        {sections.map((id) => (
+          <li key={id}>
+            <a href={`#${id}`} className="hover:underline">
+              {id.charAt(0).toUpperCase() + id.slice(1)}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
