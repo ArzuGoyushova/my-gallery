@@ -34,11 +34,7 @@ function App() {
       <div
           ref={scrollRef}
           className="flex h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth"
-          style={{
-            backgroundImage: "url('/assets/bg.png')",
-            backgroundRepeat: "repeat-x",
-            backgroundSize: "cover",
-          }}     >
+           >
         <Hero />
         <About />
         <Services />
