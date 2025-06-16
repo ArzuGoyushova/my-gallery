@@ -1,8 +1,9 @@
-import { FaHome, FaUser, FaTools, FaProjectDiagram, FaWrench, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaRegStickyNote, FaTools, FaProjectDiagram, FaWrench, FaEnvelope } from 'react-icons/fa';
 
 const sections = [
   { id: 'home', icon: <FaHome />, label: 'Home' },
   { id: 'about', icon: <FaUser />, label: 'About' },
+  { id: 'content', icon: <FaRegStickyNote />, label: 'Content' },
   { id: 'services', icon: <FaTools />, label: 'Services' },
   { id: 'projects', icon: <FaProjectDiagram />, label: 'Projects' },
   { id: 'tools', icon: <FaWrench />, label: 'Tools' },

@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Content from './components/Content';
 import Services from './components/Services';
 import Projects from './components/Projects';
 import Tools from './components/Tools';
@@ -37,6 +38,7 @@ function App() {
            >
         <Hero />
         <About />
+        <Content/>
         <Services />
         <Projects />
         <Tools />
