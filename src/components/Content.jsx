@@ -24,6 +24,7 @@ import {
       "Caption link 1",
       "Caption link 2",
       "Caption link 3",
+      "Caption link 4",
     ];
   
     const speeches = [
@@ -57,7 +58,7 @@ import {
         {/* Horizontal Panel */}
         <div className="w-screen h-screen flex flex-col">
           {/* Top Half: Channels */}
-          <div className="flex justify-center items-start h-1/2 relative z-10">
+          <div className="flex justify-center items-start h-1/3 relative z-10">
             <div className="flex gap-24 mt-4">
               {channels.map(({ icon, name, color }, i) => (
                 <div key={i} className="flex flex-col items-center">
@@ -79,7 +80,7 @@ import {
          {/* Bottom Half: Exhibits Side by Side */}
       <div className="flex flex-grow overflow-x-auto">
         {/* Captions */}
-        <div className="min-w-[25rem] p-6 border-r border-yellow-300">
+        <div className="min-w-[25rem] p-6">
         <h2 className="text-2xl font-serif text-yellow-400 mb-4">Captions</h2>
         <div className="flex flex-wrap gap-4">
   {captions.map((text, i) => (
@@ -92,7 +93,7 @@ import {
  )) } </div>
         </div> 
         {/* Play Buttons */}
-        <div className="min-w-[25rem] p-6 border-r border-yellow-300">
+        <div className="min-w-[25rem] p-6 ">
           <h2 className="text-2xl font-serif text-yellow-400 mb-4">Video Scripts</h2>
           <div className="flex gap-4">
             {[1, 2, 3].map((n) => (

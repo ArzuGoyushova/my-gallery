@@ -1,9 +1,10 @@
-import { FaHome, FaUser, FaRegStickyNote, FaTools, FaProjectDiagram, FaWrench, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaSitemap, FaUser, FaRegStickyNote, FaTools, FaProjectDiagram, FaWrench, FaEnvelope } from 'react-icons/fa';
 
 const sections = [
   { id: 'home', icon: <FaHome />, label: 'Home' },
   { id: 'about', icon: <FaUser />, label: 'About' },
   { id: 'content', icon: <FaRegStickyNote />, label: 'Content' },
+  { id: 'websiteManagement', icon: <FaSitemap />, label: 'Website Management' },
   { id: 'services', icon: <FaTools />, label: 'Services' },
   { id: 'projects', icon: <FaProjectDiagram />, label: 'Projects' },
   { id: 'tools', icon: <FaWrench />, label: 'Tools' },
@@ -12,7 +13,7 @@ const sections = [
 
 const Navbar = () => {
   return (
-    <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+    <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4 ">
       {sections.map(({ id, icon, label }) => (
         <a
           key={id}

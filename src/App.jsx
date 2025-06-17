@@ -4,9 +4,11 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Content from './components/Content';
+import WebsiteManagement from './components/WebsiteManagement';
+import Tools from './components/Tools';
+import DesignGallery from './components/Design';
 import Services from './components/Services';
 import Projects from './components/Projects';
-import Tools from './components/Tools';
 import Contact from './components/Contact';
 
 function App() {
@@ -39,6 +41,9 @@ function App() {
         <Hero />
         <About />
         <Content/>
+        <WebsiteManagement/>
+        <Tools/>
+        <DesignGallery/>
         <Services />
         <Projects />
         <Tools />
