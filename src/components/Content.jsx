@@ -54,7 +54,7 @@ import {
     ];
   
     return (
-      <section id="content" className="flex w-fit h-screen text-white">
+      <section id="content" className="flex w-[200vw] md:w-screen h-screen text-white">
         {/* Horizontal Panel */}
         <div className="w-screen h-screen flex flex-col">
           {/* Top Half: Channels */}

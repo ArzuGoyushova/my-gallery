@@ -7,8 +7,8 @@ import Content from './components/Content';
 import WebsiteManagement from './components/WebsiteManagement';
 import Tools from './components/Tools';
 import DesignGallery from './components/Design';
-import Services from './components/Services';
-import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Events from './components/Event';
 import Contact from './components/Contact';
 
 function App() {
@@ -44,9 +44,8 @@ function App() {
         <WebsiteManagement/>
         <Tools/>
         <DesignGallery/>
-        <Services />
-        <Projects />
-        <Tools />
+        <Achievements/>
+        <Events/>
         <Contact />
       </div>
     </div>
