@@ -38,22 +38,42 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+ font-size: 11px;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  font-family: 'Courier New', Courier, monospace;
+  color: #1e293b; /* slate-800 */
+  background: linear-gradient(135deg, #fef9c3, #fde68a);
+  border: 2px dashed #facc15;
+  border-radius: 6px;
+  padding: 3px 8px;
+  box-shadow: 2px 2px 0 #facc15, 4px 4px 0 #eab308;
+  transform: skewX(-5deg);
+  transition: all 0.2s ease-in-out;
+  z-index: 0;
 }
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.15) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  border-radius: 6px;
+  z-index: -1;
+}
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background: linear-gradient(135deg, #fcd34d, #fde68a);
+  transform: skewX(0deg) scale(1.05);
+  box-shadow: 2px 2px 0 #eab308, 5px 5px 0 #ca8a04;
+  border-style: solid;
 }
 
 @media (prefers-color-scheme: light) {
@@ -63,9 +83,6 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }
 
@@ -104,49 +121,15 @@ body {
 .paper {
   background: #fff;
   box-shadow:
-    /* The top layer shadow */
     0 1px 1px rgba(0,0,0,0.15),
-    /* The second layer */
     0 10px 0 -5px #eee,
-    /* The second layer shadow */
     0 10px 1px -4px rgba(0,0,0,0.15),
-     /* The third layer */
     0 20px 0 -10px #eee,
-    /* The third layer shadow */
     0 20px 1px -9px rgba(0,0,0,0.15);
-    /* Padding for demo purposes */
-    padding: 30px;
+    padding: 12px;
+    height: 100px;
 }
 
-@keyframes flicker {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-  60% {
-    opacity: 0.9;
-  }
-  70% {
-    opacity: 0.5;
-  }
-  80% {
-    opacity: 1;
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
 @keyframes swing {
    0% {
     transform: rotate(5deg);
