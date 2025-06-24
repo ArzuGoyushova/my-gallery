@@ -98,7 +98,7 @@ const Content = () => {
           </div>
 
           {/* Academy Channels */}
-          <div className="flex gap-10">
+          <div className="flex gap-4">
             {academyChannels.map(({ icon, name, color }, i) => (
               <div key={i} className="flex flex-col items-center">
                 <div className="w-px h-24 bg-yellow-300 animate-pulse" />
@@ -138,7 +138,7 @@ const Content = () => {
           </div>
 
           {/* School Channels */}
-          <div className="flex gap-10">
+          <div className="flex gap-4">
             {schoolChannels.map(({ icon, name, color }, i) => (
               <div key={i} className="flex flex-col items-center">
                 <div className="w-px h-24 bg-yellow-300 animate-pulse" />
@@ -179,7 +179,7 @@ const Content = () => {
 </div>
 
             {/* Video Scripts */}
-            <div className="min-w-[25rem] p-6">
+            <div className="min-w-[25rem] p-6 border">
               <h2 className="text-2xl font-serif text-yellow-400 mb-4">Video Scripts</h2>
               <div className="flex gap-4">
                 {[1, 2, 3].map((n) => (
@@ -195,18 +195,23 @@ const Content = () => {
             </div>
 
             {/* Creative Ideas */}
-            <div className="min-w-[25rem] p-6">
+            <div className="min-w-[25rem] p-6 border">
               <h2 className="text-2xl font-serif text-yellow-400 mb-4">Content Ideas</h2>
-              <div className="flex flex-col gap-3">
-                {ideas.map((idea, i) => (
-                  <div
-                    key={i}
-                    className="bg-yellow-200 text-black text-sm p-4 italic rounded-md shadow border-l-4 border-yellow-600"
-                  >
-                    {idea}
-                  </div>
-                ))}
-              </div>
+              <div className="grid grid-cols-2 gap-4">
+    {captions.map((text, i) => (
+      <div key={i} className="paper relative">
+        <p className="text-black/60 text-sm leading-snug line-clamp-2 text-wrap pr-8">
+          {text}
+        </p>
+        <button
+          className="absolute bottom-2 right-2"
+          onClick={() => openModal(text)}
+        >
+          Read more
+        </button>
+      </div>
+    ))}
+  </div>
             </div>
           </div>
         </div>
