@@ -22,7 +22,7 @@ const Events = () => {
   ];
 
   return (
-    <section className="min-h-screen px-10 py-16 text-white">
+    <section className="min-h-screen min-w-screen px-10 py-16 text-white">
       <h1 className="text-3xl font-bold text-yellow-400 mb-10">📅 Events I’ve Contributed To</h1>
       <p className="text-gray-300 max-w-2xl mb-12">
         From planning logistics to creating visual content and coordinating live sessions —
