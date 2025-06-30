@@ -8,7 +8,6 @@ import WebsiteManagement from './components/WebsiteManagement';
 import Tools from './components/Tools';
 import DesignGallery from './components/Design';
 import Achievements from './components/Achievements';
-import Events from './components/Event';
 import Contact from './components/Contact';
 
 function App() {
@@ -45,7 +44,6 @@ function App() {
         <Tools/>
         <DesignGallery/>
         <Achievements/>
-        <Events/>
         <Contact />
       </div>
     </div>

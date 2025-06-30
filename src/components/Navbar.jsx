@@ -6,7 +6,6 @@ import {
   FaTools,
   FaImages,
   FaTrophy,
-  FaCalendarAlt,
   FaEnvelope,
 } from "react-icons/fa";
 
@@ -18,7 +17,6 @@ const sections = [
   { id: "tools", icon: <FaTools />, label: "Tools" },
   { id: "designGallery", icon: <FaImages />, label: "Designs" },
   { id: "achievements", icon: <FaTrophy />, label: "Achievements" },
-  { id: "events", icon: <FaCalendarAlt />, label: "Events" },
   { id: "contact", icon: <FaEnvelope />, label: "Contact" },
 ];
 
