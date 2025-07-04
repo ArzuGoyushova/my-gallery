@@ -15,13 +15,11 @@ const Content = () => {
   const [modalType, setModalType] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openCaptionModal = (caption) => {
-    setSelectedCaption(caption);
-    setSelectedVideoId(null);
-    setModalType("caption");
-    setIsModalOpen(true);
-  };
-
+function openCaptionModal(text, link = null) {
+  setSelectedCaption({ text, link });
+  setModalType("caption");
+  setIsModalOpen(true);
+}
   const openVideoModal = (videoId) => {
     setSelectedVideoId(videoId);
     setSelectedCaption(null);
@@ -43,12 +41,28 @@ const Content = () => {
     "Caption link 4",
   ];
 
-  const ideas = [
-    "📦 Campaign: 'Unbox the Unexpected' — reveal concept with mystery packaging.",
-    "🎯 Idea: 'Brand Archetypes Quiz' — funnel entry through a personality quiz.",
-    "🎥 Video Series: 'Behind the Rebrand' — storytelling via transformation journey.",
-    "🎯 Idea: 'Brand Archetypes Quiz' — funnel entry through a personality quiz.",
-  ];
+const ideas = [
+  {
+  text: `🦑 Slider İdeyası: OOP Konseptini Squid Game ilə İzah Etmək.
+
+OOP (Object-Oriented Programming) prinsiplərini vizual və əyləncəli şəkildə izah etmək üçün *Squid Game* serialından istifadə etdik. Hər bir əsas OOP prinsipi üçün serialdan uyğun bir simvol və ya səhnə seçərək, bu abstrakt anlayışları tələbələr üçün daha yadda qalan və aydın bir formaya gətirdik:
+
+🔹 **Encapsulation (İnkapsulyasiya)** — Oyuncuların şəxsi məlumatları və keçmişləri sanki "gizlədilmişdi". Hər kəs eyni oyun formasında olsa da, içəridə fərqli həyat hekayələri və motivasiyalar var idi. Bu, məlumatların qorunmasını simvollaşdırdı.
+
+🔹 **Inheritance (İrsiyyət)** — *Squid Game*dəki oyunlar əvvəlki oyun versiyalarına əsaslanırdı, eynilə bir class-ın başqa bir class-dan xüsusiyyətləri miras alması kimi.
+
+🔹 **Polymorphism (Polimorfizm)** — Eyni oyun qaydaları olsa da, hər bir oyunçu bu qaydalara fərqli reaksiya verirdi. Bu da eyni interfeysə fərqli cavabların verilməsi ideyasını çatdırdı.
+
+🔹 **Abstraction (Abstraksiya)** — Oyunçular nə baş verdiyini tam anlamadan yalnız lazımi məlumatları alaraq hərəkət edirdilər. Bu, OOP-də kompleks detalların gizlədilməsi və yalnız lazım olan funksiyaların təqdim olunmasını simvolizə etdi.
+
+Bu yanaşma yalnız OOP anlayışlarını sadələşdirmədi, həm də tələbələrdə maraq və təxəyyül yaratdı. 💡`,
+  link: "https://www.instagram.com/p/DLkVh9nNrIc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+}
+,
+  { text: "🎯 Idea: 'Brand Archetypes Quiz' — funnel entry through a personality quiz.", link: "https://instagram.com/p/abc123" },
+  { text: "🎥 Video Series: 'Behind the Rebrand' — storytelling via transformation journey." },
+  { text: "🎯 Idea: 'Brand Archetypes Quiz' — funnel entry through a personality quiz.", link: "https://instagram.com/p/xyz456" },
+];
 
   const academyChannels = [
     { name: "Instagram", icon: <FaInstagram />, color: "text-pink-400" },
@@ -84,13 +98,23 @@ const Content = () => {
             >
               ✕
             </button>
+{modalType === "caption" && selectedCaption && (
+  <>
+    <h3 className="text-lg font-semibold mb-4 text-yellow-500">Full Caption</h3>
+    <p className="text-sm text-gray-800 whitespace-pre-line mb-4">{selectedCaption.text}</p>
 
-            {modalType === "caption" && selectedCaption && (
-              <>
-                <h3 className="text-lg font-semibold mb-4 text-yellow-500">Full Caption</h3>
-                <p className="text-sm text-gray-800 whitespace-pre-line">{selectedCaption}</p>
-              </>
-            )}
+    {selectedCaption.link && (
+      <a
+        href={selectedCaption.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+      >
+        View Instagram Post
+      </a>
+    )}
+  </>
+)}
 
             {modalType === "video" && selectedVideoId && (
               <div className="aspect-video w-full">
@@ -216,20 +240,26 @@ const Content = () => {
 </div>
 
 
-            {/* Content Ideas */}
-            <div className="min-w-[25rem] p-6">
-              <h2 className="text-2xl font-serif text-yellow-400 mb-4">Content Ideas</h2>
-              <div className="grid grid-cols-2 gap-4">
-                {ideas.map((text, i) => (
-                  <div key={i} className="paper relative">
-                    <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">{text}</p>
-                    <button className="absolute bottom-2 right-2" onClick={() => openCaptionModal(text)}>
-                      Read more
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="min-w-[25rem] p-6">
+  <h2 className="text-2xl font-serif text-yellow-400 mb-4">Content Ideas</h2>
+  <div className="grid grid-cols-2 gap-4 text-wrap">
+    {ideas.map((idea, i) => {
+      const text = typeof idea === "string" ? idea : idea.text;
+      const link = typeof idea === "object" && idea.link;
+      return (
+        <div key={i} className="paper relative">
+          <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">{text}</p>
+          <div className="absolute bottom-2 right-2 flex gap-2">
+            <button onClick={() => openCaptionModal(text, link)}>
+  Read more
+</button>
+          
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</div>
           </div>
         </div>
       </div>
