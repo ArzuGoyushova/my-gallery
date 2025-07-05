@@ -43,23 +43,14 @@ function openCaptionModal(text, link = null) {
 
 const ideas = [
   {
-  text: `🦑 Slider İdeyası: OOP Konseptini Squid Game ilə İzah Etmək.
-
-OOP (Object-Oriented Programming) prinsiplərini vizual və əyləncəli şəkildə izah etmək üçün *Squid Game* serialından istifadə etdik. Hər bir əsas OOP prinsipi üçün serialdan uyğun bir simvol və ya səhnə seçərək, bu abstrakt anlayışları tələbələr üçün daha yadda qalan və aydın bir formaya gətirdik:
-
-🔹 **Encapsulation (İnkapsulyasiya)** — Oyuncuların şəxsi məlumatları və keçmişləri sanki "gizlədilmişdi". Hər kəs eyni oyun formasında olsa da, içəridə fərqli həyat hekayələri və motivasiyalar var idi. Bu, məlumatların qorunmasını simvollaşdırdı.
-
-🔹 **Inheritance (İrsiyyət)** — *Squid Game*dəki oyunlar əvvəlki oyun versiyalarına əsaslanırdı, eynilə bir class-ın başqa bir class-dan xüsusiyyətləri miras alması kimi.
-
-🔹 **Polymorphism (Polimorfizm)** — Eyni oyun qaydaları olsa da, hər bir oyunçu bu qaydalara fərqli reaksiya verirdi. Bu da eyni interfeysə fərqli cavabların verilməsi ideyasını çatdırdı.
-
-🔹 **Abstraction (Abstraksiya)** — Oyunçular nə baş verdiyini tam anlamadan yalnız lazımi məlumatları alaraq hərəkət edirdilər. Bu, OOP-də kompleks detalların gizlədilməsi və yalnız lazım olan funksiyaların təqdim olunmasını simvolizə etdi.
-
-Bu yanaşma yalnız OOP anlayışlarını sadələşdirmədi, həm də tələbələrdə maraq və təxəyyül yaratdı. 💡`,
-  link: "https://www.instagram.com/p/DLkVh9nNrIc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  "text": "🦑 Slider İdeyası: OOP Konseptini Squid Game ilə İzah Etmək.\n\nOOP (Object-Oriented Programming) prinsiplərini vizual və əyləncəli şəkildə izah etmək üçün Squid Game serialından istifadə etdik. Hər bir əsas OOP prinsipi üçün serialdan uyğun bir simvol və ya səhnə seçərək, bu abstrakt anlayışları tələbələr üçün daha yadda qalan və aydın bir formaya gətirdik:\n\n Encapsulation (İnkapsulyasiya) — Oyuncuların şəxsi məlumatları və keçmişləri sanki \"gizlədilmişdi\". Hər kəs eyni oyun formasında olsa da, içəridə fərqli həyat hekayələri və motivasiyalar var idi. Bu, məlumatların qorunmasını simvollaşdırdı.\n\n Inheritance (İrsiyyət) — Squid Game-dəki oyunlar əvvəlki oyun versiyalarına əsaslanırdı, eynilə bir class-ın başqa bir class-dan xüsusiyyətləri miras alması kimi.\n\nPolymorphism (Polimorfizm) — Eyni oyun qaydaları olsa da, hər bir oyunçu bu qaydalara fərqli reaksiya verirdi. Bu da eyni interfeysə fərqli cavabların verilməsi ideyasını çatdırdı.\n\nAbstraction (Abstraksiya) — Oyunçular nə baş verdiyini tam anlamadan yalnız lazımi məlumatları alaraq hərəkət edirdilər. Bu, OOP-də kompleks detalların gizlədilməsi və yalnız lazım olan funksiyaların təqdim olunmasını simvolizə etdi.\n\nBu yanaşma yalnız OOP anlayışlarını sadələşdirmədi, həm də tələbələrdə maraq və təxəyyül yaratdı.",
+ link: "https://www.instagram.com/p/DLkVh9nNrIc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
 }
 ,
-  { text: "🎯 Idea: 'Brand Archetypes Quiz' — funnel entry through a personality quiz.", link: "https://instagram.com/p/abc123" },
+ {
+  "text": "🐥 Əgər mən Duolingo-nun Marketinq komandasında olsaydım, aşağıdakı kreativ ideyaları təklif edərdim:\n\nAygün Kazımovanın S.O.S klipinin parodiyasını yaratmaq: Duolingo quşu ilə bu məşhur videonu yenidən canlandıraraq həm nostalji, həm də əyləncəli kontent təqdim etmək.\n\nDuo quşunu ikonik məkanlarda fotosessiyalara çıxarmaq: Məsələn, Crescent Mall, İçərişəhər və ya Flame Towers kimi tanınmış yerlərdə foto və video çəkilişlər.\n\nMəşhur “Mənə çay verərsən?” videosunun parodiyası: Duo quşunu bu səhnəyə daxil etməklə həm lokal mədəniyyəti vurğulamaq, həm də viral potensial yaratmaq.\n\n“Dünyanın ən hündür bayrağı” önündə çəkiliş: Milli qürur elementlərini yumorla birləşdirərək izləyicilərlə emosional bağ qurmaq.\n\nJet2 Holidays üslubunda, lakin Azərbaycanın küləyi ilə bağlı video: Duo quşu dincəlmək üçün Azərbaycana gəlir, küləyə qapılıb işinə qayıdır – həm əyləncəli, həm də brend mesajı daşıyan video konsept.\n\nBu ideyalar Duolingo-nun həm lokal auditoriya ilə əlaqəsini gücləndirər, həm də kreativ kontentlə yadda qalmasını təmin edərdi."
+},
+
   { text: "🎥 Video Series: 'Behind the Rebrand' — storytelling via transformation journey." },
   { text: "🎯 Idea: 'Brand Archetypes Quiz' — funnel entry through a personality quiz.", link: "https://instagram.com/p/xyz456" },
 ];
