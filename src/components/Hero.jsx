@@ -1,4 +1,12 @@
+import { useTranslation } from 'react-i18next';
+
 const Hero = () => {
+  const { t, i18n } = useTranslation();
+
+  const handleChangeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
   <section
   id="home"
@@ -7,7 +15,7 @@ const Hero = () => {
   {/* Left: Wall Text */}
   <div className="w-1/2 ps-12 md:p-6">
     <h1 className="text-2xl md:text-[2.75rem] leading-snug font-serif tracking-wide mb-4 text-neutral-100 text-wrap">
-      Welcome to My Digital Gallery
+      {t('hero.welcome')}
     </h1>
     <p className="text-base md:text-lg text-neutral-300 leading-relaxed font-light border-l-4 border-yellow-600 pl-4 text-wrap">
       Each scroll reveals a new exhibit — a project, a tool, a vision. Just like walking through curated halls,

@@ -35,7 +35,7 @@ function openCaptionModal(text, link = null) {
   };
 
   const captions = [
-    "Caption lihakdjsakdgsakjhagdhsagdjhsa sjhakdsgjajdhsd hsagdjshadjshgajdhnk 1",
+    {text:"IT Mühəndis kursumuzda təhsil tamamilə praktika əsaslıdır! 🔧\n\nBu videoda tələbələrimiz turniket sisteminin qurulması prosesini yerində öyrənirlər.\n\nMüəllimin dəstəyi ilə turniket açılır, daxili sistemlər yoxlanılır və kabel bağlantıları düzgün şəkildə qoşulur. 🧰\n\nBu cür real avadanlıq üzərində keçirilən praktiki dərslər, tələbələrimizin yalnız nəzəri bilik deyil, həm də peşəkar təcrübə qazanmasına şərait yaradır. 💡", link:"https://www.instagram.com/p/DKuQGHcNKBA/"},
     "Caption link 2",
     "Caption link 3",
     "Caption link 4",
@@ -84,7 +84,7 @@ const ideas = [
         <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-white max-w-2xl w-full p-6 rounded-lg shadow-lg relative">
             <button
-              className="absolute top-2 right-2 text-gray-500 hover:text-black"
+              className="button-yellow absolute top-2 right-2 text-gray-500 hover:text-black"
               onClick={closeModal}
             >
               ✕
@@ -187,14 +187,20 @@ const ideas = [
             <div className="min-w-[25rem] p-6">
               <h2 className="text-2xl font-serif text-yellow-400 mb-4">Captions</h2>
               <div className="grid grid-cols-2 gap-4">
-                {captions.map((text, i) => (
+                {captions.map((caption, i) => {
+                   const text = typeof caption === "string" ? caption : caption.text;
+      const link = typeof caption === "object" && caption.link;
+      return(
                   <div key={i} className="paper relative">
-                    <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">{text}</p>
-                    <button className="absolute bottom-2 right-2" onClick={() => openCaptionModal(text)}>
-                      Read more
-                    </button>
-                  </div>
-                ))}
+          <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">{text}</p>
+          <div className="absolute bottom-2 right-2 flex gap-2">
+            <button className="button-yellow" onClick={() => openCaptionModal(text, link)}>
+  Read more
+</button>
+          
+          </div>
+        </div>
+                )})}
               </div>
             </div>
 
@@ -218,8 +224,8 @@ const ideas = [
 
       {/* Play Button */}
       <button
-        onClick={() => openVideoModal(video.id)}
-      className="absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-yellow-300 text-black hover:scale-110 transition"
+       onClick={() => openVideoModal(video.id)}
+      className="button-yellow absolute top-1/2 left-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-yellow-300 text-black hover:scale-110 transition"
     >
         <FaPlay />
       </button>
@@ -241,7 +247,7 @@ const ideas = [
         <div key={i} className="paper relative">
           <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">{text}</p>
           <div className="absolute bottom-2 right-2 flex gap-2">
-            <button onClick={() => openCaptionModal(text, link)}>
+            <button className="button-yellow" onClick={() => openCaptionModal(text, link)}>
   Read more
 </button>
           

@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "home": "Ana səhifə",
+    "about": "Haqqımda",
+    "content": "Kontent",
+    "websiteManagement": "Saytın idarəsi",
+    "tools": "Alətlər",
+    "designs": "Dizaynlar",
+    "achievements": "Nailiyyətlər",
+    "contact": "Əlaqə"
+  },
+  "hero":{
+    "welcome" : "Rəqəmsal Qalereyama Xoş Gəlmisiniz!"
+  }
+}

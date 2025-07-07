@@ -1,0 +1,18 @@
+{
+  "nav": 
+  {
+    "home": "Home",
+    "about": "About",
+    "content": "Content",
+    "websiteManagement": "Website Management",
+    "tools": "Tools",
+    "designs": "Designs",
+    "achievements": "Achievements",
+    "contact": "Contact"
+  },
+
+  "hero" : 
+  {
+     "welcome": "Welcome to My Digital Gallery!"
+  } 
+}
