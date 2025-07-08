@@ -18,8 +18,7 @@ const Hero = () => {
       {t('hero.welcome')}
     </h1>
     <p className="text-base md:text-lg text-neutral-300 leading-relaxed font-light border-l-4 border-yellow-600 pl-4 text-wrap">
-      Each scroll reveals a new exhibit — a project, a tool, a vision. Just like walking through curated halls,
-      this portfolio invites you to explore code as a form of art.
+    {t('hero.desc')}
     </p>
   </div>
 

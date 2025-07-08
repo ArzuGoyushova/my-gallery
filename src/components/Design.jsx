@@ -107,7 +107,7 @@ const DesignGallery = () => {
                 className="px-2 cursor-pointer"
                 onClick={() => openModal(item)}
               >
-                <div className="w-[160px] rounded-lg border border-yellow-500 overflow-hidden hover:scale-105 transition shadow-md mx-auto">
+                <div className="w-full rounded-lg border border-yellow-500 overflow-hidden hover:scale-105 transition shadow-md mx-auto">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -167,34 +167,44 @@ const DesignGallery = () => {
 </a>
 </div>
 
-      {/* Modal */}
-      {isModalOpen && selectedItem && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50">
-          <div className="bg-neutral-900 text-white p-6 rounded-xl max-w-lg w-full relative border border-yellow-400">
-            <button
-              className="absolute top-2 right-3 text-gray-400 hover:text-white text-xl"
-              onClick={closeModal}
-            >
-              ✕
-            </button>
-            <img
-              src={selectedItem.image}
-              alt={selectedItem.title}
-              className="rounded-md w-full aspect-[4/5] object-contain mb-4"
-            />
-            <h2 className="text-xl text-yellow-300 font-semibold">{selectedItem.title}</h2>
-            <p className="text-sm text-gray-300 mt-2">{selectedItem.description}</p>
-            <a
-              href={selectedItem.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-sm text-blue-400 hover:underline"
-            >
-              Open in Canva ↗
-            </a>
-          </div>
-        </div>
-      )}
+{isModalOpen && selectedItem && (
+  <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-start justify-center overflow-x-auto z-50">
+    <div className="relative bg-neutral-900 text-white p-6 pt-10 rounded-xl h-[90vh] w-1/4 border border-yellow-400 shadow-lg mt-10 overflow-y-auto">
+      {/* Close Button */}
+      <button
+        className="absolute top-3 right-3 bg-yellow-500 text-black rounded-full w-8 h-8 flex items-center justify-center text-lg shadow hover:bg-yellow-400 transition"
+        onClick={closeModal}
+        aria-label="Close modal"
+      >
+        ✕
+      </button>
+
+      {/* Image */}
+      <img
+        src={selectedItem.image}
+        alt={selectedItem.title}
+        className="rounded-md w-full object-contain mb-4 border"
+      />
+
+      {/* Title & Description */}
+      <h2 className="text-xl text-yellow-300 font-semibold">{selectedItem.title}</h2>
+      <p className="text-sm text-gray-300 mt-2">{selectedItem.description}</p>
+
+      {/* Link */}
+      <a
+        href={selectedItem.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 text-sm text-blue-400 hover:underline"
+      >
+        Open in Canva ↗
+      </a>
+    </div>
+  </div>
+)}
+
+
+
     </section>
   );
 };

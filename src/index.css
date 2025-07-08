@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+html {
+  cursor: url('/cursor.png'), auto;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +16,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 a {
@@ -27,6 +31,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  cursor: url('/public/cursor.png'), auto;
 }
 
 h1 {
@@ -88,6 +93,7 @@ body {
   background-size: auto 100vh;
   background-position: bottom left; 
   background-attachment: fixed;
+ 
 }
 
 

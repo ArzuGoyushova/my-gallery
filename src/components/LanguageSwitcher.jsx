@@ -19,7 +19,7 @@ const LanguageSwitcher = () => {
     <div className="relative hidden md:block pt-2">
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="flex items-center gap-1 text-white text-sm px-2 py-1 rounded-md border border-white hover:bg-white/10 transition"
+        className="flex items-center gap-1 text-white text-sm px-1 py-1 rounded-md bg-black/50 hover:bg-white/10 transition"
       >
         {displayLang}
         <FaChevronDown className="text-xs" />

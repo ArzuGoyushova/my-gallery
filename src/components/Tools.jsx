@@ -15,20 +15,20 @@ const Tools = () => {
 
   const certificates = [
     {
-      title: "Front-End Development",
-      provider: "JET Academy",
-      date: "May 2024",
+      title: "Fundamentals of Marketing",
+      provider: "Google",
+      date: "March 2025",
       link: "#", // replace with actual file/view link
     },
     {
-      title: "Python & Django Bootcamp",
-      provider: "XYZ Institute",
+      title: "SEO",
+      provider: "Hubspot",
       date: "Jan 2024",
       link: "#",
     },
     {
-      title: "Power BI for Data Analytics",
-      provider: "Coursera",
+      title: "Emoji Marketing",
+      provider: "Semrush",
       date: "March 2023",
       link: "#",
     },

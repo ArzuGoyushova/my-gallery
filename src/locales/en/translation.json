@@ -13,6 +13,7 @@
 
   "hero" : 
   {
-     "welcome": "Welcome to My Digital Gallery!"
+     "welcome": "Welcome to My Digital Gallery!",
+     "desc": "You can browse my gallery-style portfolio by swiping from left to right 😊. You'll find examples of copywriting, design work, achievements, SEO, and other diverse content. 🖌️"
   } 
 }

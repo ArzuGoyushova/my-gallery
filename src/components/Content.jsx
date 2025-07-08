@@ -36,9 +36,10 @@ function openCaptionModal(text, link = null) {
 
   const captions = [
     {text:"IT Mühəndis kursumuzda təhsil tamamilə praktika əsaslıdır! 🔧\n\nBu videoda tələbələrimiz turniket sisteminin qurulması prosesini yerində öyrənirlər.\n\nMüəllimin dəstəyi ilə turniket açılır, daxili sistemlər yoxlanılır və kabel bağlantıları düzgün şəkildə qoşulur. 🧰\n\nBu cür real avadanlıq üzərində keçirilən praktiki dərslər, tələbələrimizin yalnız nəzəri bilik deyil, həm də peşəkar təcrübə qazanmasına şərait yaradır. 💡", link:"https://www.instagram.com/p/DKuQGHcNKBA/"},
-    "Caption link 2",
-    "Caption link 3",
-    "Caption link 4",
+    {text: "JET School Ghibli sehrinə büründü! ✨\n\nDərslərdən görüntülərə bir də Studio Ghibli üslubunda baxın! 😍", link:"https://www.instagram.com/p/DH8l7lQNvlX/?igsh=MWcwbG05dGZ2NGJh"},
+    {text: "Texnologiya tarixini dəyişən qadınlar! 💻🚀💡\n\nOnların kəşfləri Wi-Fi, süni intellekt və hətta Aya uçuşların əsasında duran texnologiyaların inkişafına töhfə verib! 💪✨\n\nİstər texnologiya, istərsə də digər sahələrdə iz qoyan bütün qadınları təbrik edir, onlara xoşbəxtlik, uğur, güc və sağlamlıq arzulayırıq! 💐\n\nTexnologiya sahəsində çalışan, bu sahəyə yeni addım atan və ya bu yolda ilk addımlarını atmağı düşünən bütün qadınları dəstəkləyir və onlarla birlikdə daha parlaq gələcək qurmaqdan qürur duyuruq! 💻✨\n\n8 Mart – Beynəlxalq Qadınlar Gününüz mübarək! 🌸", link:"https://www.instagram.com/p/DG75dTGIoQt/?img_index=2&igsh=MWZkNmY5cGpyaW1pMQ%3D%3D"},
+    {text: "BUG BOUNTY DÜNYASINA GİRİŞ! 🔎💰\n\nEtik hakerlik bacarıqlarınızı gəlirə çevirmək istəyirsiniz? 🤑💡 Bug bounty proqramları sizə kiber təhlükəsizlik sahəsində həm inkişaf etmək, həm də mükafatlar qazanmaq imkanı verir! 🚀\n\nBu slaydlarda maksimum gəlir əldə etmə strategiyalarını öyrənəcəksiniz:\n\n🛠️ Əsas bacarıqlar və metodlar \n\n🎯 Az araşdırılan sahələrdə ixtisaslaşmaq \n\n📊 Alətlər və avtomatlaşdırma \n\nKibertəhlükəsizlik kursu haqqında ətraflı məlumat almaq üçün bizə müraciət edin!", link:"https://www.instagram.com/p/DHx-IO9IdeM/?igsh=YzdheDIxYWNpOXYy"},
+    
   ];
 
 const ideas = [
@@ -91,7 +92,7 @@ const ideas = [
             </button>
 {modalType === "caption" && selectedCaption && (
   <>
-    <h3 className="text-lg font-semibold mb-4 text-yellow-500">Full Caption</h3>
+    <h3 className="text-lg font-semibold mb-4 text-yellow-500">Full Version</h3>
     <p className="text-sm text-gray-800 whitespace-pre-line mb-4">{selectedCaption.text}</p>
 
     {selectedCaption.link && (
@@ -124,22 +125,24 @@ const ideas = [
 
       <div className="w-screen h-screen flex flex-col">
         {/* Top Half: Channels */}
-        <div className="flex justify-center items-center h-1/3 relative z-10 gap-16 px-8">
-          {/* JET Academy */}
-          <div className="flex flex-col items-center">
-            <div className="relative flex items-center animate-swing" style={{ transformOrigin: "top center" }}>
-              <div className="bg-yellow-400 text-black font-bold text-sm tracking-wide px-6 py-2 rounded-l-md z-10">
-                JET Academy
-              </div>
-              <div className="w-6 h-9 bg-yellow-400" style={{ clipPath: "polygon(0 0, 100% 50%, 0 100%)" }}></div>
-            </div>
-          </div>
+        <div className="flex justify-center items-start h-1/4 relative z-10 gap-10 px-8">
+        
+         {/* JET Academy */}
+<div className="flex flex-col items-center justify-center h-full">
+  <div className="relative flex items-center animate-swing" style={{ transformOrigin: "top center" }}>
+    <div className="bg-yellow-400 text-black font-bold text-sm tracking-wide px-6 py-2 rounded-l-md z-10">
+      JET Academy
+    </div>
+    <div className="w-6 h-9 bg-yellow-400" style={{ clipPath: "polygon(0 0, 100% 50%, 0 100%)" }}></div>
+  </div>
+</div>
+
 
           {/* Academy Channels */}
           <div className="flex gap-4">
             {academyChannels.map(({ icon, name, color }, i) => (
               <div key={i} className="flex flex-col items-center">
-                <div className="w-px h-24 bg-yellow-300 animate-pulse" />
+                <div className="w-px h-20 bg-yellow-300" />
                 <div
                   className={`w-14 h-14 rounded-full bg-neutral-800 flex items-center justify-center shadow-xl border border-yellow-400 animate-glow text-2xl ${color}`}
                 >
@@ -153,20 +156,20 @@ const ideas = [
           </div>
 
           {/* JET School */}
-          <div className="flex flex-col items-center">
-            <div className="relative flex items-center animate-swing" style={{ transformOrigin: "top center" }}>
-              <div className="bg-yellow-400 text-black font-bold text-sm tracking-wide px-6 py-2 rounded-l-md z-10">
-                JET School
-              </div>
-              <div className="w-6 h-9 bg-yellow-400" style={{ clipPath: "polygon(0 0, 100% 50%, 0 100%)" }}></div>
-            </div>
-          </div>
+          <div className="flex flex-col items-center justify-center h-full">
+  <div className="relative flex items-center animate-swing" style={{ transformOrigin: "top center" }}>
+    <div className="bg-yellow-400 text-black font-bold text-sm tracking-wide px-6 py-2 rounded-l-md z-10">
+      JET School
+    </div>
+    <div className="w-6 h-9 bg-yellow-400" style={{ clipPath: "polygon(0 0, 100% 50%, 0 100%)" }}></div>
+  </div>
+</div>
 
           {/* School Channels */}
           <div className="flex gap-4">
             {schoolChannels.map(({ icon, name, color }, i) => (
               <div key={i} className="flex flex-col items-center">
-                <div className="w-px h-24 bg-yellow-300 animate-pulse" />
+                <div className="w-px h-20 bg-yellow-300 animate-pulse" />
                 <div
                   className={`w-14 h-14 rounded-full bg-neutral-800 flex items-center justify-center shadow-xl border border-yellow-400 animate-glow text-2xl ${color}`}
                 >
@@ -182,7 +185,7 @@ const ideas = [
 
         {/* Bottom Half */}
         <div className="flex justify-center items-start h-2/3 relative z-10">
-          <div className="flex gap-16 mt-8 overflow-x-auto">
+          <div className="flex gap-16 mt-2 overflow-x-auto">
             {/* Captions */}
             <div className="min-w-[25rem] p-6">
               <h2 className="text-2xl font-serif text-yellow-400 mb-4">Captions</h2>
@@ -192,7 +195,7 @@ const ideas = [
       const link = typeof caption === "object" && caption.link;
       return(
                   <div key={i} className="paper relative">
-          <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">{text}</p>
+          <p className="text-black/60 text-sm leading-snug line-clamp-3 pr-8 text-wrap">{text}</p>
           <div className="absolute bottom-2 right-2 flex gap-2">
             <button className="button-yellow" onClick={() => openCaptionModal(text, link)}>
   Read more

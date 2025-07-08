@@ -31,7 +31,7 @@ function App() {
   }, []);
 
   return (
-    <div className="h-screen w-screen overflow-hidden">
+    <div className="h-screen w-screen overflow-hidden cursor-[url('/cursor.png'),_auto]">
       <Navbar />
       <div
           ref={scrollRef}
