@@ -15,5 +15,27 @@
   {
      "welcome": "Welcome to My Digital Gallery!",
      "desc": "You can browse my gallery-style portfolio by swiping from left to right 😊. You'll find examples of copywriting, design work, achievements, SEO, and other diverse content. 🖌️"
-  } 
+  },
+   "about":{
+      "titles": {
+    "title1": "Content & Copywriting",
+    "title2": "Design & Visuals",
+    "title3": "Campaigns & Web",
+    "title4": "SEO"
+  },
+  "items": {
+    "title1": ["Blog Writing", "Captions", "Video Scripts", "Brand Voice"],
+    "title2": ["Presentations", "Syllabuses", "Stickers & Certificates", "Aesthetic Layouts"],
+    "title3": ["Campaign Ideas", "Creative Briefs", "Website Management", "Content Uploading"],
+    "title4": ["SEO Research", "Keyword Strategy", "On-Page Optimization", "Meta Tags & Descriptions"]
+  },
+  "intro": {
+    "curator" : "Meet the Curator!",
+    "desc" : "I'm Arzu — a digital marketing specialist who creates purposeful content, visuals, and strategies. From writing captions, scripts, presentation materials, and blog posts to managing websites and optimizing SEO — I turn ideas into action and connect brands with their audiences."
+  } },
+   "content" : 
+  {
+     "welcome": "Welcome to My Digital Gallery!",
+     "desc": "You can browse my gallery-style portfolio by swiping from left to right 😊. You'll find examples of copywriting, design work, achievements, SEO, and other diverse content. 🖌️"
+  }
 }

@@ -12,5 +12,23 @@
   "hero":{
     "welcome" : "Rəqəmsal Qalereyama Xoş Gəlmisiniz!",
     "desc" : "Qalereya üslubunda hazırlanmış portfolioma soldan sağa sürüşdürərək baxa bilərsiniz 😊. Sizi kopiraytinq nümunələri, dizayn işlərim, əldə etdiyim nailiyyətlər, SEO və digər müxtəlif məzmunlar gözləyir. 🖌️"
+  },
+  "about": {
+  "titles": {
+    "title1": "Kontent və Kopiraytinq",
+    "title2": "Dizayn və Vizual Materiallar",
+    "title3": "Kampaniyalar və Veb",
+    "title4": "SEO"
+  },
+  "items": {
+    "title1": ["Bloq Yazıları", "Paylaşım Mətnləri", "Video Ssenariləri", "Brend Dili"],
+    "title2": ["Təqdimatlar", "Sillabuslar", "Stikerlər və Sertifikatlar", "Estetik Maketlər"],
+    "title3": ["Kampaniya Fikirləri", "Yaradıcı Briflər", "Vebsayt İdarəsi", "Kontentin Yüklənməsi"],
+    "title4": ["SEO Araşdırması", "Açar Söz Strategiyası", "On-Page Optimizasiya", "Meta Etiketlər və Təsvirlər"]
+  },
+  "intro": {
+    "heading": "Kuratorla Tanış Olun!",
+    "desc": "Mənim adım Arzudur — məqsədli kontent, vizual materiallar və strategiyalar hazırlayan rəqəmsal marketinq mütəxssisiyəm. Paylaşımlar üçün mətn, skript, təqdimat materialları və bloq yazılarının yaradılmasından tutmuş vebsaytların idarə olunması və SEO optimizasiyasına qədər — fikirləri icraata çevirir, brendləri auditoriyaları ilə birləşdirirəm."
   }
+}
 }
