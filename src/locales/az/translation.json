@@ -27,8 +27,30 @@
     "title4": ["SEO Araşdırması", "Açar Söz Strategiyası", "On-Page Optimizasiya", "Meta Etiketlər və Təsvirlər"]
   },
   "intro": {
-    "heading": "Kuratorla Tanış Olun!",
+    "curator": "Kuratorla Tanış Olun!",
     "desc": "Mənim adım Arzudur — məqsədli kontent, vizual materiallar və strategiyalar hazırlayan rəqəmsal marketinq mütəxssisiyəm. Paylaşımlar üçün mətn, skript, təqdimat materialları və bloq yazılarının yaradılmasından tutmuş vebsaytların idarə olunması və SEO optimizasiyasına qədər — fikirləri icraata çevirir, brendləri auditoriyaları ilə birləşdirirəm."
   }
+},
+"content": {
+  "caption":  "Caption-lar",
+  "video-scripts":  "Video skriptlər",
+  "content-ideas":  "Kontent ideyaları",
+  "full-version":  "Tam versiya",
+  "ins-post":  "Instagram postuna bax",
+  "read-more":  "Daha çox.."
+},
+"website": {
+  "title":  "Saytın idarəsi",
+  "desc":  "JET School veb-saytı üçün bütün yazılı məzmunu idarə edirəm – kurslar haqqında məlumat, bloq yazıları, xəbərlər və s. digər məlumatlar.",
+  "visit":  "Veb-sayta daxil ol ↗",
+  "google":  "Google Axtarış Nəticələri (SEO Əsaslı)",
+  "google-desc": "Bu nəticələr tamamilə orqanik şəkildə — ödənişli reklam istifadə olunmadan əldə olunub.",
+  "google-check": "Google-da bax ↗",
+  "rank": "Sıra:"
+},
+"tools": {
+  "title":  "Alətlər və Sertifikatlar",
+  "tool":  "🧰 Alətlər və Texnologiyalar",
+  "cert":  "Sertifikatlar"
 }
 }

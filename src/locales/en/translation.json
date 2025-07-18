@@ -37,5 +37,27 @@
   {
      "welcome": "Welcome to My Digital Gallery!",
      "desc": "You can browse my gallery-style portfolio by swiping from left to right 😊. You'll find examples of copywriting, design work, achievements, SEO, and other diverse content. 🖌️"
-  }
+  },
+  "content": {
+  "caption":  "Captions",
+  "video-scripts":  "Video scripts",
+  "content-ideas":  "Content ideas",
+  "full-version":  "Full Version",
+  "ins-post":  "Check Instagram post",
+  "read-more":  "Read more"
+},
+"website": {
+  "title":  "Website management",
+  "desc":  "I manage all the written content for the JET School website — including course descriptions, blog posts, news updates, and general site copy.",
+  "visit":  "Visit Website ↗",
+  "google":  "Google Search Visibility (SEO-Based)",
+  "google-desc":  "These results were achieved organically — without any paid ads.",
+  "google-check":  "See on Google ↗",
+  "rank":  "Rank:"
+},
+"tools": {
+  "title":  "Tools & Certificates",
+  "tool":  "🧰 Tools & Technologies",
+  "cert":  "Certificates"
+}
 }

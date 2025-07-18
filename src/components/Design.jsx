@@ -153,19 +153,6 @@ const DesignGallery = () => {
           </div>
         </div>
       </div>
-<div className="w-1/2  border-t border-yellow-600 pt-3 text-center">
-  <p className="text-gray-300 text-sm mb-2">
-    Want to explore more designs?
-  </p>
- <a
-  href="https://www.canva.com/folder/your-folder-link"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block bg-yellow-500 text-black font-medium px-4 py-2 rounded hover:bg-yellow-300 transition no-underline"
->
-  📁 View Full Canva Folder
-</a>
-</div>
 
 {isModalOpen && selectedItem && (
   <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-start justify-center overflow-x-auto z-50">

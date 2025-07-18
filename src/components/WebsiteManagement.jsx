@@ -1,6 +1,10 @@
 import { FaSearch } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const WebsiteManagement = () => {
+
+  const { t } = useTranslation();
+
   const searchResults = [
     {
       keyword: "uşaqlar üçün IT kursu",
@@ -28,17 +32,16 @@ const WebsiteManagement = () => {
   return (
     <section id="websiteManagement" className="min-h-screen w-full md:w-3/4 shrink-0 px-6 pt-6 sm:px-10 text-white">
       <h1 className="text-3xl font-bold text-yellow-400 mb-2">
-        Website Management
+        {t('website.title')}
       </h1>
 
       {/* Overview */}
       <div className="mb-4">
         <p className="text-gray-300 max-w-2xl">
-          I manage all the written content for the JET School website — including course descriptions, blog posts, news updates, and general site copy.
-        </p>
+          {t('website.desc')}    </p>
         <p className="text-yellow-300 mt-2 underline">
           <a href="https://jetschool.az" target="_blank" rel="noreferrer">
-            Visit Website ↗
+            {t('website.visit')}
           </a>
         </p>
       </div>
@@ -46,10 +49,10 @@ const WebsiteManagement = () => {
       {/* SEO Search Result Showcase */}
       <div className="">
         <h2 className="text-xl text-yellow-300 mb-1 flex items-center gap-2">
-          <FaSearch /> Google Search Visibility (SEO-Based)
+          <FaSearch /> {t('website.google')}
         </h2>
         <p className="text-sm text-gray-400 mb-3">
-          These results were achieved organically — without any paid ads.
+          {t('website.google-desc')}
         </p>
 
         <div className="space-y-4">
@@ -70,7 +73,7 @@ const WebsiteManagement = () => {
               {/* Right side */}
               <div className="sm:text-right text-left sm:ml-4">
                 <p className="text-sm text-yellow-300 font-semibold whitespace-nowrap">
-                  📍 Rank: #{result.place}
+                  📍 {t('website.rank')} #{result.place}
                 </p>
                 <a
                   href={result.link}
@@ -78,7 +81,7 @@ const WebsiteManagement = () => {
                   rel="noopener noreferrer"
                   className="text-sm text-blue-300 underline hover:text-blue-400 whitespace-nowrap"
                 >
-                  See on Google ↗
+                  {t('website.google-check')}
                 </a>
               </div>
             </div>

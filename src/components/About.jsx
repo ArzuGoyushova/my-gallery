@@ -1,11 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 const About = () => {
-  const { t, i18n } = useTranslation();
-
-  const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
+  const { t } = useTranslation();
 
   // Define keys for titles and items (items are arrays in translation JSON)
   const categories = [

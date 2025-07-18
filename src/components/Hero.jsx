@@ -1,11 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
-  const { t, i18n } = useTranslation();
-
-  const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
+  const { t } = useTranslation();
 
   return (
   <section

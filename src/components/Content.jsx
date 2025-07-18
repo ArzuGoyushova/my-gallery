@@ -8,8 +8,12 @@ import {
   FaPlay,
 } from "react-icons/fa";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const Content = () => {
+
+   const { t } = useTranslation();
+
   const [selectedCaption, setSelectedCaption] = useState(null);
   const [selectedVideoId, setSelectedVideoId] = useState(null);
   const [modalType, setModalType] = useState(null);
@@ -92,7 +96,7 @@ const ideas = [
             </button>
 {modalType === "caption" && selectedCaption && (
   <>
-    <h3 className="text-lg font-semibold mb-4 text-yellow-500">Full Version</h3>
+    <h3 className="text-lg font-semibold mb-4 text-yellow-500">{t('content.full-version')}</h3>
     <p className="text-sm text-gray-800 whitespace-pre-line mb-4">{selectedCaption.text}</p>
 
     {selectedCaption.link && (
@@ -102,7 +106,7 @@ const ideas = [
         rel="noopener noreferrer"
         className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
       >
-        View Instagram Post
+        {t('content.ins-post')}
       </a>
     )}
   </>
@@ -188,7 +192,7 @@ const ideas = [
           <div className="flex gap-16 mt-2 overflow-x-auto">
             {/* Captions */}
             <div className="min-w-[25rem] p-6">
-              <h2 className="text-2xl font-serif text-yellow-400 mb-4">Captions</h2>
+              <h2 className="text-2xl font-serif text-yellow-400 mb-4">  {t('content.caption')}</h2>
               <div className="grid grid-cols-2 gap-4">
                 {captions.map((caption, i) => {
                    const text = typeof caption === "string" ? caption : caption.text;
@@ -198,7 +202,7 @@ const ideas = [
           <p className="text-black/60 text-sm leading-snug line-clamp-3 pr-8 text-wrap">{text}</p>
           <div className="absolute bottom-2 right-2 flex gap-2">
             <button className="button-yellow" onClick={() => openCaptionModal(text, link)}>
-  Read more
+    {t('content.read-more')}
 </button>
           
           </div>
@@ -208,7 +212,7 @@ const ideas = [
             </div>
 
        <div className="min-w-[25rem] p-6">
-  <h2 className="text-2xl font-serif text-yellow-400 mb-4">Video Scripts</h2>
+  <h2 className="text-2xl font-serif text-yellow-400 mb-4">  {t('content.video-scripts')}</h2>
   <div className="flex gap-4">
  {videoData.map((video) => {
   const thumbnail = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
@@ -241,7 +245,7 @@ const ideas = [
 
 
           <div className="min-w-[25rem] p-6">
-  <h2 className="text-2xl font-serif text-yellow-400 mb-4">Content Ideas</h2>
+  <h2 className="text-2xl font-serif text-yellow-400 mb-4">  {t('content.content-ideas')}</h2>
   <div className="grid grid-cols-2 gap-4 text-wrap">
     {ideas.map((idea, i) => {
       const text = typeof idea === "string" ? idea : idea.text;
@@ -251,7 +255,7 @@ const ideas = [
           <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">{text}</p>
           <div className="absolute bottom-2 right-2 flex gap-2">
             <button className="button-yellow" onClick={() => openCaptionModal(text, link)}>
-  Read more
+    {t('content.read-more')}
 </button>
           
           </div>
