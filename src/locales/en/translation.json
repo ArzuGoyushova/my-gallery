@@ -59,5 +59,30 @@
   "title":  "Tools & Certificates",
   "tool":  "🧰 Tools & Technologies",
   "cert":  "Certificates"
+},
+"design": {
+  "title":  "Designs",
+  "desc":  "Preview my design work. Click to view in detail.",
+  "canva":  "View on Canva",
+  "presentation":  "Presentations",
+  "banners":  "Banners"
+},
+"achiev": {
+  "title":  "Achievements",
+  "head1":  "Most Viewed Video on YouTube",
+  "head2":  "Full Group Conversion from One Banner",
+  "head3":  "SEO Keyword Success",
+  "desc1":  "A short-form video I created for JET School became the most viewed video on their YouTube channel of all time. It led to over 100+ new subscribers, increasing the total follower count by 50%.",
+  "desc2":  "A single banner I designed for the AI Engineering course led to two full groups being formed. The Canva design was used across platforms and had a direct impact on registration.",
+  "desc3":  "Thanks to strategic content writing, our JET School site ranks on the first page of Google for keywords like 'uşaqlar üçün proqramlaşdırma' and 'Scratch dərsləri Bakı.' We gained visibility with zero paid ads.",
+  "button": "View Source"
+},
+"contact": {
+  "title": "Contact me",
+  "desc1": "Want to discuss a project, partnership, or just share an idea? Feel free to reach out! I'm always open to meaningful collaboration and fun conversations. 😊",
+   "name": "Arzu Goyushova",
+  "job-title": "Digital Marketing Specialist",
+  "CVbutton": "Check my CV",
+  "desc2": "Let’s make an impact together! 🚀"
 }
 }

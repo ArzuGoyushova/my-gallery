@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 const About = () => {
   const { t } = useTranslation();
 
-  // Define keys for titles and items (items are arrays in translation JSON)
   const categories = [
     { titleKey: 'about.titles.title1', itemsKey: 'about.items.title1' },
     { titleKey: 'about.titles.title2', itemsKey: 'about.items.title2' },

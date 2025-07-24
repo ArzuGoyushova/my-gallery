@@ -2,46 +2,57 @@ import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from 'react-i18next';
 
 const DesignGallery = () => {
+  const { t } = useTranslation();
+
   const topDesigns = [
     {
-      title: "AI Banner",
+      title: "Süni İntellekt Mühəndisliyi - Banner",
       image: "/src/assets/designs/AI.png",
-      link: "https://www.canva.com/design/your-link-here",
-      description: "Promotional banner for AI course",
+      link: "https://www.canva.com/design/DAGeOl1c6pc/y02kiVpXShmWKWcd8y1XoA/edit?utm_content=DAGeOl1c6pc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      description: "AI kursu üçün hazırlanmış reklam banneri. Kursla bağlı əsas və diqqətçəkən məqamlar vizualda ön plana çıxarılıb. Kampaniya nəticəsində yüksək keyfiyyətli müraciətlər əldə olunub."
     },
     {
-      title: "Course Banner",
+      title: "Travel to China - Banner",
       image: "/src/assets/designs/Travel.png",
-      link: "https://www.canva.com/design/your-link-here",
-      description: "Used in course announcement",
-    },
+      link: "https://www.canva.com/design/DAGrdJ8EunE/TiRyVdKaC9gtSWSN0_kYTQ/edit?utm_content=DAGrdJ8EunE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      description: "Çin səfəri ilə bağlı kurs elanını təqdim etmək üçün sadə və diqqətçəkən tur banneri hazırlanmışdır. Dizayn Pinterest-də başqa bir dizayndan ilhamlanıb."
+  },
     {
-      title: "Instagram Carousel",
+      title: "Rus sektoru üçün banner",
       image: "/src/assets/designs/schoolrussian.png",
       link: "https://www.canva.com/design/your-link-here",
-      description: "Instagram carousel design",
+      description: "JET School-un rus sektoru üçün hazırlanmış reklam banneri. Kursla bağlı əsas və diqqətçəkən məqamlar vizualda ön plana çıxarılıb. Kampaniya nəticəsində yüksək keyfiyyətli müraciətlər əldə olunub."
+
     },
     {
-      title: "Event Announcement",
+      title: "Python Əsasları - Açıq Dərs banneri",
       image: "/src/assets/designs/schoolpython.png",
-      link: "https://www.canva.com/design/your-link-here",
-      description: "Event banner",
+      link: "https://www.canva.com/design/DAGrc8VmdZE/MfkakrNdRiUtk3ff3ohB4w/edit?utm_content=DAGrc8VmdZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      description: "Python ilə Back-End Proqramlaşdırma kursunun açıq dərsi üçün hazırlanmış banner.",
     },
+   {
+  title: "'Fərqi Yoxdu' Coffee Shop",
+  image: "/src/assets/designs/Fərqi yoxdu ad.png",
+  link: "https://www.canva.com/design/DAGr1TAeEis/PQb5kA5vRjrGS5VnxjKEOw/view?utm_content=DAGr1TAeEis&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha85e7a0086",
+  description: "\nLayihə adı: \nFərqi Yoxdu Coffee Shop – Outdoor Banner Dizaynı \n\nİdeya və Konsept:\n“Fərqi Yoxdu” adı gündəlik danışıqda çox istifadə olunan “mənə fərqi yoxdu” ifadəsindən ilhamlanaraq seçilmişdir. İnsanlar nə vaxt harasa getmək, nə yemək və ya nə içmək barədə qərar verə bilmirlərsə, bu ifadəni işlədirlər. Mən də bu qərarsızlığa yumorla yanaşaraq onu bir brend kimliyinə çevirdim. Kafe, məhz belə insanlar üçün rahat və qərarsızlığın “qərarlı ünvanı” olur.\n\nVizual Elementlər:\nDizaynda istifadə etdiyim pişik obrazı sakitliyi, müstəqilliyi və 'mənə nə' ifadəsini təmsil edir. Pişiklər də insanlar kimi öz istədikləri vaxtda, öz istədikləri şəkildə hərəkət edirlər — bu da “Fərqi Yoxdu” konsepti ilə tam uyğun gəlir. Bu obraz həm brendə xarakter qatır, həm də izləyicilərdə tanışlıq və təbəssüm yaradır.\n\nDizayn Yanaşması:\nÜslub olaraq zarafatcıl bir yanaşma seçmişəm. Coffee Shop mövzsunda rəng palitrası və əyləncəli tipoqrafiya sayəsində məkan daha rahat və dəvətkar görünür. Ölkə mədəniyyətinə bağlılıq və vizual yumor bir araya gələrək, brendin yadda qalmasına kömək edir. Bu ideya dizayner işi ilə daha yaxşı formatda göstərilə bilər."
+}
+
   ];
 
   const presentations = [
     {
-      title: "Java Research",
+      title: "Java Course - Market Research",
       image: "/src/assets/designs/Java Research.png",
-      link: "https://www.canva.com/design/python-pitch",
+      link: "https://www.canva.com/design/DAGW5mkuK9M/id808K8jAXrU_NKnmYu3XQ/edit?utm_content=DAGW5mkuK9M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description: "Introductory presentation for Python & AI course.",
     },
     {
-      title: "Travel Course Presentation",
+      title: "General Course Presentation",
       image: "/src/assets/designs/JET.png",
-      link: "https://www.canva.com/design/travel-pitch",
+      link: "https://www.canva.com/design/DAGoENxq6DU/P9w7do2DEJL8VsTFQ4Y9dg/edit?utm_content=DAGoENxq6DU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description: "Slides for our travel-themed digital design course.",
     },
   ];
@@ -89,9 +100,9 @@ const DesignGallery = () => {
     >
       {/* Header */}
       <div className="mb-4">
-        <h1 className="text-3xl font-bold text-yellow-400">🎨 Design Gallery</h1>
+        <h1 className="text-3xl font-bold text-yellow-400">🎨 {t('design.title')}</h1>
         <p className="text-gray-400 max-w-2xl mt-2">
-          Preview my design work. Click to view in detail.
+         {t('design.desc')}
         </p>
       </div>
 
@@ -99,7 +110,7 @@ const DesignGallery = () => {
       <div className="flex flex-col lg:flex-row gap-12 justify-between">
         {/* Slider Section */}
         <div className="lg:w-1/2 w-full">
-          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">🖼️ Top Banners</h2>
+          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">🖼️ {t('design.banners')}</h2>
           <Slider {...sliderSettings}>
             {topDesigns.map((item, index) => (
               <div
@@ -122,9 +133,8 @@ const DesignGallery = () => {
           </Slider>
         </div>
 
-        {/* Presentations Section */}
         <div className="lg:w-1/2 w-full">
-          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">📽️ Presentations</h2>
+          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">📽️ {t('design.presentation')}</h2>
           <div className="flex gap-4">
             {presentations.map((item, index) => (
               <div
@@ -138,14 +148,14 @@ const DesignGallery = () => {
                 />
                 <div className="p-4">
                   <h3 className="text-lg font-semibold text-yellow-200">{item.title}</h3>
-                  <p className="text-sm text-gray-300 mt-1">{item.description}</p>
+                  <p className="text-sm text-gray-800 whitespace-pre-line mb-4">{item.description}</p>
                   <a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-3 text-blue-400 text-sm hover:underline"
                   >
-                    View on Canva ↗
+                     {t('design.canva')} ↗
                   </a>
                 </div>
               </div>
@@ -175,7 +185,7 @@ const DesignGallery = () => {
 
       {/* Title & Description */}
       <h2 className="text-xl text-yellow-300 font-semibold">{selectedItem.title}</h2>
-      <p className="text-sm text-gray-300 mt-2">{selectedItem.description}</p>
+      <p className="text-sm whitespace-pre-line mb-4 text-wrap">{selectedItem.description}</p>
 
       {/* Link */}
       <a
@@ -184,14 +194,11 @@ const DesignGallery = () => {
         rel="noopener noreferrer"
         className="inline-block mt-4 text-sm text-blue-400 hover:underline"
       >
-        Open in Canva ↗
+        {t('design.canva')} ↗
       </a>
     </div>
   </div>
 )}
-
-
-
     </section>
   );
 };

@@ -1,29 +1,31 @@
 import { useState } from "react";
-import {
-  FaPlay,
-} from "react-icons/fa";
+import {  FaPlay } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
+
 const Achievements = () => {
+ const { t } = useTranslation();
+
   const items = [
     {
-      title: "📹 Most Viewed Video on YouTube",
+      title: `📹 ${t('achiev.head1')}`,
       description:
-        "A short-form video I created for JET School became the most viewed video on their YouTube channel of all time. It led to over 100+ new subscribers, increasing the total follower count by 50%.",
+        `${t('achiev.desc1')}`,
       type: "video",
       media: "IGf9dnNxwY0",
-      link: "https://www.youtube.com/@jetschool",
+      link: "https://www.youtube.com/shorts/IGf9dnNxwY0",
     },
     {
-      title: "🎯 Full Group Conversion from One Banner",
+      title: `🎯 ${t('achiev.head2')}`,
       description:
-        "A single banner I designed for the AI Engineering course led to two full groups being formed. The Canva design was used across platforms and had a direct impact on registration.",
+        `${t('achiev.desc2')}`,
       type: "image",
       media: "/src/assets/designs/AI.png",
       link: "https://www.canva.com/design/your-banner-link",
     },
     {
-      title: "🔍 SEO Keyword Success",
+      title: `🔍 ${t('achiev.head3')}`,
       description:
-        "Thanks to strategic content writing, our JET School site ranks on the first page of Google for keywords like 'uşaqlar üçün proqramlaşdırma' and 'Scratch dərsləri Bakı.' We gained visibility with zero paid ads.",
+        `${t('achiev.desc3')}`,
       type: "image",
       media: "/src/assets/designs/seorank.png",
       link: "https://www.google.com/search?q=u%C5%9Faqlar+%C3%BC%C3%A7%C3%BCn+proqramla%C5%9Fd%C4%B1rma",
@@ -36,9 +38,9 @@ const Achievements = () => {
   const closeModal = () => setSelectedMedia(null);
 
   return (
-    <section className="min-h-screen px-10 py-16 text-white min-w-screen shrink-0">
+    <section id="achievements"  className="min-h-screen px-10 py-16 text-white min-w-screen shrink-0">
       <h1 className="text-4xl font-bold text-yellow-400 mb-12 text-center">
-        🏆 Achievements
+        🏆  {t('achiev.title')}
       </h1>
 
       <div className="grid grid-cols-3 gap-4 max-w-7xl mx-auto">
@@ -90,7 +92,7 @@ const Achievements = () => {
             rel="noopener noreferrer"
             className="text-sm text-blue-400 hover:underline mt-auto"
           >
-            🔗 View Source ↗
+            🔗 {t('achiev.button')} ↗
           </a>
         )}
       </div>

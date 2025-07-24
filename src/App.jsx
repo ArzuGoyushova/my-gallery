@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-
+import { useEffect, useRef, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -12,39 +11,78 @@ import Contact from './components/Contact';
 
 function App() {
   const scrollRef = useRef();
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Check if screen is mobile size
   useEffect(() => {
-    const el = scrollRef.current;
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
+  // Horizontal scroll effect only for desktop
+  useEffect(() => {
+    if (isMobile) return; // Skip horizontal scroll on mobile
+    
+    const el = scrollRef.current;
+    
     const handleWheel = (e) => {
       if (el) {
-        e.preventDefault(); // Prevent vertical scroll
-        el.scrollLeft += e.deltaY; // Translate vertical scroll to horizontal movement
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
       }
     };
 
-    el.addEventListener('wheel', handleWheel, { passive: false });
+    el?.addEventListener('wheel', handleWheel, { passive: false });
 
     return () => {
-      el.removeEventListener('wheel', handleWheel);
+      el?.removeEventListener('wheel', handleWheel);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
-    <div className="h-screen w-screen overflow-hidden cursor-[url('/cursor.png'),_auto]">
+    <div className={`${isMobile ? 'h-auto min-h-screen' : 'h-screen'} w-screen ${isMobile ? 'overflow-auto' : 'overflow-hidden'} cursor-[url('/cursor.png'),_auto]`}>
       <Navbar />
       <div
-          ref={scrollRef}
-          className="flex h-full overflow-x-scroll overflow-y-hidden whitespace-nowrap scroll-smooth"
-           >
-        <Hero />
-        <About />
-        <Content/>
-        <WebsiteManagement/>
-        <Tools/>
-        <DesignGallery/>
-        <Achievements/>
-        <Contact />
+        ref={scrollRef}
+        className={`
+          ${isMobile 
+            ? 'flex flex-col h-auto overflow-visible' 
+            : 'flex h-full overflow-x-scroll overflow-y-hidden'
+          } 
+          ${isMobile ? 'whitespace-normal' : 'whitespace-nowrap'} 
+          scroll-smooth
+        `}
+      >
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <Hero />
+        </div>
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <About />
+        </div>
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <Content />
+        </div>
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <WebsiteManagement />
+        </div>
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <Tools />
+        </div>
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <DesignGallery />
+        </div>
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <Achievements />
+        </div>
+        <div className={isMobile ? 'w-full' : 'flex-shrink-0'}>
+          <Contact />
+        </div>
       </div>
     </div>
   );

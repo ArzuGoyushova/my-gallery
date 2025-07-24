@@ -1,9 +1,12 @@
 import { FaEnvelope, FaLinkedin, FaInstagram, FaFileAlt } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   return (
-    <section className="min-h-screen flex flex-col items-center py-18 px-6 text-white shrink-0">
- <h1 className="text-3xl font-bold text-yellow-400 mb-10">📬 Contact Me</h1>
+    <section id="contact"  className="min-h-screen min-w-screen flex flex-col items-center py-18 px-6 text-white shrink-0 border">
+ <h1 className="text-3xl font-bold text-yellow-400 mb-10">📬{t('contact.title')}</h1>
       <div className="w-full max-w-5xl flex flex-col md:flex-row gap-10 items-center md:items-start bg-neutral-900 rounded-2xl shadow-lg p-8 border border-yellow-500">
         
         {/* Left Card */}
@@ -13,8 +16,8 @@ const Contact = () => {
             alt="Profile"
             className="w-24 h-24 mx-auto rounded-full object-cover mb-4 border border-yellow-300"
           />
-          <h2 className="text-xl font-bold text-yellow-300 mb-1">Arzu Goyushova</h2>
-          <p className="text-sm text-gray-400">Digital Marketing Specialist</p>
+          <h2 className="text-xl font-bold text-yellow-300 mb-1">{t('contact.name')}</h2>
+          <p className="text-sm text-gray-400">{t('contact.job-title')}</p>
           
         </div>
 
@@ -22,8 +25,7 @@ const Contact = () => {
         <div className="w-full md:w-2/3">
          
           <p className="text-gray-300 mb-6 leading-relaxed text-wrap">
-            Want to discuss a project, partnership, or just share an idea? Feel free to reach out!
-            I'm always open to meaningful collaboration and fun conversations.
+            {t('contact.desc1')}
           </p>
 
           <div className="space-y-5">
@@ -69,13 +71,13 @@ const Contact = () => {
   rel="noopener noreferrer"
   className="text-sm text-blue-400 group-hover:underline"
 >
-  Check my CV
+  {t('contact.CVButton')}
 </a>
             </div>
           </div>
 
           <p className="text-sm text-gray-500 italic mt-10">
-            Let’s make something impactful together 🚀
+            {t('contact.desc2')}
           </p>
         </div>
       </div>

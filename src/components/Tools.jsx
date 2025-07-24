@@ -46,23 +46,17 @@ const Tools = () => {
       title: "SEO",
       provider: "Hubspot",
       link: "#",
-      image: "/src/assets/certs/semrush-leads.jpg",
+      image: "/src/assets/certs/hubspot-seo.png",
     },
     {
-      title: "Emoji Marketing",
+      title: "Content Marketing",
       provider: "Semrush",
       link: "#",
-      image: "/src/assets/certs/semrush-emoji.jpg",
+      image: "/src/assets/certs/semrush-content.jpg",
     },
        {
-      title: "Fundamentals of Marketing",
-      provider: "Google",
-      link: "#",
-      image: "/src/assets/certs/semrush-emoji.jpg",
-    },
-    {
-      title: "SEO",
-      provider: "Hubspot",
+      title: "Lead Generation",
+      provider: "Semrush",
       link: "#",
       image: "/src/assets/certs/semrush-leads.jpg",
     },
@@ -71,6 +65,12 @@ const Tools = () => {
       provider: "Semrush",
       link: "#",
       image: "/src/assets/certs/semrush-emoji.jpg",
+    },
+    {
+      title: "Google Analytics",
+      provider: "Google",
+      link: "#",
+      image: "/src/assets/certs/google-analytics.jpg",
     },
        {
       title: "Fundamentals of Marketing",
@@ -93,7 +93,7 @@ const Tools = () => {
   ];
 
   return (
-    <section className="min-h-screen w-screen shrink-0 px-10 py-16 text-white">
+    <section id="tools" className="min-h-screen w-screen shrink-0 px-10 py-16 text-white">
       <h1 className="text-3xl font-bold text-yellow-400 mb-4">{t('tools.title')}</h1>
       <div className="flex gap-4">
         {/* TOOLS SECTION */}

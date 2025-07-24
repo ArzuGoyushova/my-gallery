@@ -45,12 +45,37 @@
   "visit":  "Veb-sayta daxil ol ↗",
   "google":  "Google Axtarış Nəticələri (SEO Əsaslı)",
   "google-desc": "Bu nəticələr tamamilə orqanik şəkildə — ödənişli reklam istifadə olunmadan əldə olunub.",
-  "google-check": "Google-da bax ↗",
+  "google-check": "Google-da baxın ↗",
   "rank": "Sıra:"
 },
 "tools": {
   "title":  "Alətlər və Sertifikatlar",
   "tool":  "🧰 Alətlər və Texnologiyalar",
   "cert":  "Sertifikatlar"
+},
+"design": {
+  "title":  "Dizaynlar",
+  "desc":  "Dizayn işlərimə nəzər salın. Ətraflı baxmaq üçün klikləyin.",
+  "canva":  "Canva-da bax",
+  "presentation":  "Prezentasiyalar",
+  "banners":  "Bannerlər"
+},
+"achiev": {
+  "title": "Nailiyyətlər",
+  "head1": "YouTube-da Ən Çox Baxılan Video",
+  "head2": "Bir Banner ilə Tam Qrup Yığımı",
+  "head3": "SEO Açar Söz Nailiyyəti",
+  "desc1": "JET School üçün hazırladığım qısa video məktəbin YouTube kanalında bütün dövrlərin ən çox izlənilən videosuna çevrildi. Bu, 100-dən çox yeni abunəçinin əlavə olunmasına səbəb oldu və ümumi izləyici sayı 50% artdı.",
+  "desc2": "Süni İntellekt Mühəndisliyi kursu üçün hazırladığım tək bir banner iki tam qrupun formalaşmasına səbəb oldu. Canva dizaynı müxtəlif platformalarda istifadə olundu və qeydiyyata birbaşa təsir göstərdi.",
+  "desc3": "Strateji kontent yazılışı sayəsində JET School saytımız 'uşaqlar üçün proqramlaşdırma' və 'Scratch dərsləri Bakı' kimi açar sözlər üzrə Google-da ilk səhifədə yer aldı. Heç bir ödənişli reklam olmadan görünürlük qazandıq.",
+  "button": "Mənbəyə baxın"
+},
+"contact": {
+  "title": "Əlaqə",
+  "desc1": "Layihə, əməkdaşlıq və ya sadəcə bir fikri müzakirə etmək istəyirsiniz? Mənimlə əlaqə saxlamaqdan çəkinməyin! Həmişə mənalı əməkdaşlıqlara və maraqlı söhbətlərə açığam. 😊",
+  "name": "Arzu Göyüşova",
+  "job-title": "Rəqəmsal Marketinq üzrə Mütəxəssis",
+  "CVbutton": "CV-mi yoxlayın",
+  "desc2": "Gəlin birlikdə iz qoyaq! 🚀"
 }
 }

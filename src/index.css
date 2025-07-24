@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-html {
-  cursor: url('/cursor.png'), auto;
-}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,7 +13,6 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 a {
@@ -24,18 +20,15 @@ a {
   text-decoration: inherit;
 }
 
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  cursor: url('/public/cursor.png'), auto;
 }
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
 }
 
@@ -43,7 +36,7 @@ h1 {
  font-size: 11px;
   font-weight: 500;
   font-family: 'Courier New', Courier, monospace;
-  color: #1e293b; /* slate-800 */
+  color: #1e293b; 
   background: linear-gradient(135deg, #fef9c3, #fde68a);
   border: 2px dashed #facc15;
   border-radius: 6px;
@@ -93,7 +86,6 @@ body {
   background-size: auto 100vh;
   background-position: bottom left; 
   background-attachment: fixed;
- 
 }
 
 
@@ -146,4 +138,15 @@ body {
 
 .animate-swing {
   animation: swing 2s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+   body {
+    position: relative;
+    background: #1e293b;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+  }
 }
