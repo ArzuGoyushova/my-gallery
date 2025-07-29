@@ -5,7 +5,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="contact"  className="min-h-screen min-w-screen flex flex-col items-center py-18 px-6 text-white shrink-0 border">
+    <section id="contact"  className="min-h-screen min-w-screen flex flex-col items-center py-18 px-6 text-white shrink-0">
  <h1 className="text-3xl font-bold text-yellow-400 mb-10">📬{t('contact.title')}</h1>
       <div className="w-full max-w-5xl flex flex-col md:flex-row gap-10 items-center md:items-start bg-neutral-900 rounded-2xl shadow-lg p-8 border border-yellow-500">
         

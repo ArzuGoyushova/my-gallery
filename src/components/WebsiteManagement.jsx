@@ -30,7 +30,7 @@ const WebsiteManagement = () => {
   ];
 
   return (
-    <section id="websiteManagement" className="min-h-screen w-full md:w-3/4 shrink-0 px-6 pt-6 sm:px-10 text-white">
+    <section id="websiteManagement" className="min-h-screen min-w-screen shrink-0 px-6 pt-6 sm:px-10 text-white">
       <h1 className="text-3xl font-bold text-yellow-400 mb-2">
         {t('website.title')}
       </h1>
