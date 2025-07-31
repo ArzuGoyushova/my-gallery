@@ -13,7 +13,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-screen h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-24 py-16 text-white shrink-0"
+      className="w-screen md:h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-24 py-16 text-white md:shrink-0"
     >
       {/* Left Side: Short Bio */}
       <div className="md:w-1/2 max-w-xl mb-4">
@@ -24,7 +24,7 @@ const About = () => {
       </div>
 
       {/* Right Side: Skills - vertical scroll on mobile, grid on desktop */}
-      <div className="md:w-1/2 w-screen max-h-100 md:max-h-full overflow-y-auto py-4 md:overflow-visible mb-8 md:mb-0 grid grid-cols-2 gap-y-4 md:px-12 justify-items-center">
+      <div className="md:w-1/2 w-screen max-h-100 md:max-h-full md:overflow-y-auto py-4 md:overflow-visible mb-8 md:mb-0 grid grid-cols-2 gap-y-4 md:px-12 justify-items-center">
         {categories.map(({ titleKey, itemsKey }, i) => (
           <div
             key={titleKey}

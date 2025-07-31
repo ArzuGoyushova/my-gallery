@@ -40,7 +40,7 @@ const Tools = () => {
       title: "Fundamentals of Marketing",
       provider: "Google",
       link: "#",
-      image: "/src/assets/certs/semrush-emoji.jpg",
+      image: "/src/assets/certs/fund.jpg",
     },
     {
       title: "SEO",
@@ -94,7 +94,7 @@ const Tools = () => {
 
   return (
     <section id="tools" className="min-h-screen w-screen shrink-0 px-10 py-16 text-white">
-      <h1 className="text-3xl font-bold text-yellow-400 mb-4">{t('tools.title')}</h1>
+      <h1 className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-4 text-center">{t('tools.title')}</h1>
       <div className="flex gap-4">
         {/* TOOLS SECTION */}
         <div className="w-1/4">
@@ -112,31 +112,35 @@ const Tools = () => {
           </div>
         </div>
 
-        {/* CERTIFICATES SECTION */}
-        <div className="w-3/4">
-          <h2 className="text-2xl text-yellow-300 mb-2">🎓 {t('tools.cert')}</h2>
-          <div className="flex gap-2 flex-wrap">
-            {certificates.map((cert, i) => (
-              <div
-                key={i}
-                onClick={() => openModal(cert)}
-                className="cursor-pointer bg-neutral-800 min-w-[200px] max-w-[200px] border border-yellow-500 rounded-lg p-4 shadow-md hover:bg-neutral-700 transition"
-              >
-                <img
-                  src={cert.image}
-                  alt={`${cert.title} Certificate`}
-                  className="w-full rounded-md mb-1 border border-yellow-400"
-                />
-                <h3 className="text-wrap font-semibold text-yellow-200">{cert.title}</h3>
-                <p className="text-sm text-gray-400">{cert.provider}</p>
-                 <button className="button-yellow">
-  Click
-</button>
-              </div>
-            ))}
+    <div className="w-3/4">
+  <h2 className="text-2xl text-yellow-300 mb-2">🎓 {t('tools.cert')}</h2>
+  <div className="flex gap-4 flex-wrap">
+    {certificates.map((cert, i) => (
+      <div
+        key={i}
+        onClick={() => openModal(cert)}
+        className="cursor-pointer bg-neutral-800 w-[200px] h-auto border border-yellow-500 rounded-lg p-3 shadow-md hover:bg-neutral-700 transition flex flex-col justify-between"
+      >
+        <div>
+          <div className="w-full h-[120px] mb-2">
+            <img
+              src={cert.image}
+              alt={`${cert.title} Certificate`}
+              className="w-full h-full object-cover rounded-md border border-yellow-400"
+            />
           </div>
+          <h3 className="font-semibold text-yellow-200 text-sm leading-tight line-clamp-2 ">
+            {cert.title}
+          </h3>
+          <p className="text-xs text-gray-400">{cert.provider}</p>
         </div>
+        <button className="button-yellow text-sm mt-2">Click</button>
       </div>
+    ))}
+  </div>
+</div>
+</div>
+
 
       {/* MODAL */}
       {isModalOpen && selectedItem && (

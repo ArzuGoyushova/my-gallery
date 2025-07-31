@@ -100,7 +100,7 @@ const DesignGallery = () => {
     >
       {/* Header */}
       <div className="mb-4">
-        <h1 className="text-3xl font-bold text-yellow-400">🎨 {t('design.title')}</h1>
+        <h1 className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 ">🎨 {t('design.title')}</h1>
         <p className="text-gray-400 max-w-2xl mt-2">
          {t('design.desc')}
         </p>

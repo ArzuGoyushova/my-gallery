@@ -39,7 +39,7 @@ const Achievements = () => {
 
   return (
     <section id="achievements"  className="min-h-screen px-10 py-16 text-white min-w-screen shrink-0">
-      <h1 className="text-4xl font-bold text-yellow-400 mb-12 text-center">
+      <h1 className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-12 text-center">
         🏆  {t('achiev.title')}
       </h1>
 

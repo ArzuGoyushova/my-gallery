@@ -30,65 +30,74 @@ const WebsiteManagement = () => {
   ];
 
   return (
-    <section id="websiteManagement" className="min-h-screen min-w-screen shrink-0 px-6 pt-6 sm:px-10 text-white">
-      <h1 className="text-3xl font-bold text-yellow-400 mb-2">
-        {t('website.title')}
-      </h1>
+<section
+  id="websiteManagement"
+  className=" w-full pt-6 px-4 sm:px-6 md:px-12 lg:px-20 text-white"
+>
+  <h1 className="text-[1.75rem] sm:text-[2.5rem] md:text-[3.6rem] font-bold text-yellow-400 mb-2">
+    {t('website.title')}
+  </h1>
 
-      {/* Overview */}
-      <div className="mb-4">
-        <p className="text-gray-300 max-w-2xl">
-          {t('website.desc')}    </p>
-        <p className="text-yellow-300 mt-2 underline">
-          <a href="https://jetschool.az" target="_blank" rel="noreferrer">
-            {t('website.visit')}
-          </a>
-        </p>
-      </div>
+  {/* Overview */}
+  <div className="mb-6 max-w-3xl">
+    <p className="text-gray-300">
+      {t('website.desc')}
+    </p>
+    <p className="text-yellow-300 mt-2 underline">
+      <a href="https://jetschool.az" target="_blank" rel="noreferrer">
+        {t('website.visit')}
+      </a>
+    </p>
+  </div>
 
-      {/* SEO Search Result Showcase */}
-      <div className="">
-        <h2 className="text-xl text-yellow-300 mb-1 flex items-center gap-2">
-          <FaSearch /> {t('website.google')}
-        </h2>
-        <p className="text-sm text-gray-400 mb-3">
-          {t('website.google-desc')}
-        </p>
+  {/* SEO Search Result Showcase */}
+  <div className="space-y-4">
+    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+      <h2 className="text-xl text-yellow-300 flex items-center gap-2">
+        <FaSearch /> {t('website.google')}
+      </h2>
+      <p className="text-sm text-gray-400 sm:ml-4">
+        {t('website.google-desc')}
+      </p>
+    </div>
 
-        <div className="space-y-4">
-          {searchResults.map((result, i) => (
-            <div
-              key={i}
-              className="bg-neutral-800 border border-yellow-500 rounded-md p-4 shadow-md w-full lg:w-2/3 flex flex-col sm:flex-row justify-between gap-1"
+    <div className="space-y-4">
+      {searchResults.map((result, i) => (
+        <div
+          key={i}
+          className="bg-neutral-800 border border-yellow-500 rounded-md p-4 shadow-md flex flex-col sm:flex-row justify-between gap-3 w-full"
+        >
+          {/* Left side */}
+          <div className="flex-1 min-w-0">
+            <p className="text-sm text-gray-400 break-words">
+              🔍 <span className="italic">"{result.keyword}"</span>
+            </p>
+            <p className="text-base sm:text-lg text-blue-400 font-medium truncate">
+              {result.title}
+            </p>
+            <p className="text-sm text-green-400 truncate">{result.url}</p>
+          </div>
+
+          {/* Right side */}
+          <div className="mt-2 sm:mt-0 flex flex-col items-start sm:items-end gap-1">
+            <p className="text-sm text-yellow-300 font-semibold whitespace-nowrap">
+              📍 {t('website.rank')} #{result.place}
+            </p>
+            <a
+              href={result.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-300 underline hover:text-blue-400 whitespace-nowrap"
             >
-              {/* Left side */}
-              <div className="w-4/5">
-                <p className="text-sm text-gray-400 ">
-                  🔍 <span className="italic">"{result.keyword}"</span>
-                </p>
-                <p className="text-m text-blue-400">{result.title}</p>
-                <p className="text-sm text-green-400">{result.url}</p>
-              </div>
-
-              {/* Right side */}
-              <div className="sm:text-right text-left sm:ml-4">
-                <p className="text-sm text-yellow-300 font-semibold whitespace-nowrap">
-                  📍 {t('website.rank')} #{result.place}
-                </p>
-                <a
-                  href={result.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-300 underline hover:text-blue-400 whitespace-nowrap"
-                >
-                  {t('website.google-check')}
-                </a>
-              </div>
-            </div>
-          ))}
+              {t('website.google-check')}
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 
