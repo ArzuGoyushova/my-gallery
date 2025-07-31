@@ -95,9 +95,9 @@ const Tools = () => {
   return (
     <section id="tools" className="min-h-screen w-screen shrink-0 px-10 py-16 text-white">
       <h1 className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-4 text-center">{t('tools.title')}</h1>
-      <div className="flex gap-4">
+      <div className="flex flex-col md:flex-row gap-4">
         {/* TOOLS SECTION */}
-        <div className="w-1/4">
+        <div className="md:w-1/4 w-full">
           <h2 className="text-2xl text-yellow-300 mb-1">{t('tools.tool')}</h2>
           <div className="flex flex-wrap gap-2 max-w-[800px]">
             {tools.map((tool, i) => (
@@ -112,17 +112,17 @@ const Tools = () => {
           </div>
         </div>
 
-    <div className="w-3/4">
+    <div className="md:w-3/4 w-full">
   <h2 className="text-2xl text-yellow-300 mb-2">🎓 {t('tools.cert')}</h2>
   <div className="flex gap-4 flex-wrap">
     {certificates.map((cert, i) => (
       <div
         key={i}
         onClick={() => openModal(cert)}
-        className="cursor-pointer bg-neutral-800 w-[200px] h-auto border border-yellow-500 rounded-lg p-3 shadow-md hover:bg-neutral-700 transition flex flex-col justify-between"
+        className="cursor-pointer bg-neutral-800 md:w-[200px] w-full h-auto border border-yellow-500 rounded-lg p-3 shadow-md hover:bg-neutral-700 transition flex flex-col justify-between"
       >
         <div>
-          <div className="w-full h-[120px] mb-2">
+          <div className="w-full md:h-[120px] h-auto mb-2">
             <img
               src={cert.image}
               alt={`${cert.title} Certificate`}
