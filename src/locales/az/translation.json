@@ -51,7 +51,9 @@
 "tools": {
   "title":  "Alətlər və Sertifikatlar",
   "tool":  "🧰 Alətlər və Texnologiyalar",
-  "cert":  "Sertifikatlar"
+  "cert":  "Sertifikatlar",
+  "click": "Klikləyin",
+  "viewCert": "Sertifikata bax"
 },
 "design": {
   "title":  "Dizaynlar",

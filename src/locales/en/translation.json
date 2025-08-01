@@ -58,7 +58,9 @@
 "tools": {
   "title":  "Tools & Certificates",
   "tool":  "🧰 Tools & Technologies",
-  "cert":  "Certificates"
+  "cert":  "Certificates",
+  "click": "Click",
+  "viewCert": "View Certificate"
 },
 "design": {
   "title":  "Designs",

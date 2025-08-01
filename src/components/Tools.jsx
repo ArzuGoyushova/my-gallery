@@ -1,8 +1,26 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+
+const containerStagger = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 12 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 const Tools = () => {
   const { t } = useTranslation();
+  const reduce = useReducedMotion();
+
   const [selectedItem, setSelectedItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -54,7 +72,7 @@ const Tools = () => {
       link: "#",
       image: "/src/assets/certs/semrush-content.jpg",
     },
-       {
+    {
       title: "Lead Generation",
       provider: "Semrush",
       link: "#",
@@ -72,7 +90,7 @@ const Tools = () => {
       link: "#",
       image: "/src/assets/certs/google-analytics.jpg",
     },
-       {
+    {
       title: "Fundamentals of Marketing",
       provider: "Google",
       link: "#",
@@ -89,96 +107,119 @@ const Tools = () => {
       provider: "Semrush",
       link: "#",
       image: "/src/assets/certs/semrush-emoji.jpg",
-    }
+    },
   ];
 
   return (
     <section id="tools" className="min-h-screen w-screen shrink-0 px-10 py-16 text-white">
-      <h1 className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-4 text-center">{t('tools.title')}</h1>
-      <div className="flex flex-col md:flex-row gap-4">
+      <motion.h1
+        className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-4 text-center"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        {t("tools.title")}
+      </motion.h1>
+
+      <motion.div
+        className="flex flex-col md:flex-row gap-4"
+        variants={containerStagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {/* TOOLS SECTION */}
-        <div className="md:w-1/4 w-full">
-          <h2 className="text-2xl text-yellow-300 mb-1">{t('tools.tool')}</h2>
+        <motion.div className="md:w-1/4 w-full" variants={fadeUp}>
+          <h2 className="text-2xl text-yellow-300 mb-1">{t("tools.tool")}</h2>
           <div className="flex flex-wrap gap-2 max-w-[800px]">
             {tools.map((tool, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm flex items-center gap-2 hover:scale-105 transition"
+                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm flex items-center gap-2"
+                whileHover={!reduce ? { scale: 1.05 } : {}}
+                transition={{ type: "spring", stiffness: 250, damping: 20 }}
               >
                 <span>{tool.icon}</span>
                 <span>{tool.name}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-    <div className="md:w-3/4 w-full">
-  <h2 className="text-2xl text-yellow-300 mb-2">🎓 {t('tools.cert')}</h2>
-  <div className="flex gap-4 flex-wrap">
-    {certificates.map((cert, i) => (
-      <div
-        key={i}
-        onClick={() => openModal(cert)}
-        className="cursor-pointer bg-neutral-800 md:w-[200px] w-full h-auto border border-yellow-500 rounded-lg p-3 shadow-md hover:bg-neutral-700 transition flex flex-col justify-between"
-      >
-        <div>
-          <div className="w-full md:h-[120px] h-auto mb-2">
-            <img
-              src={cert.image}
-              alt={`${cert.title} Certificate`}
-              className="w-full h-full object-cover rounded-md border border-yellow-400"
-            />
+        {/* CERTIFICATES */}
+        <motion.div className="md:w-3/4 w-full" variants={fadeUp}>
+          <h2 className="text-2xl text-yellow-300 mb-2">🎓 {t("tools.cert")}</h2>
+          <div className="flex gap-4 flex-wrap">
+            {certificates.map((cert, i) => (
+              <motion.div
+                key={i}
+                onClick={() => openModal(cert)}
+                className="cursor-pointer bg-neutral-800 md:w-[200px] w-full h-auto border border-yellow-500 rounded-lg p-3 shadow-md hover:bg-neutral-700 transition flex flex-col justify-between"
+                whileHover={!reduce ? { scale: 1.02 } : {}}
+                transition={{ type: "spring", stiffness: 220, damping: 18 }}
+              >
+                <div>
+                  <div className="w-full md:h-[120px] h-auto mb-2">
+                    <img
+                      src={cert.image}
+                      alt={`${cert.title} Certificate`}
+                      className="w-full h-full object-cover rounded-md border border-yellow-400"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-yellow-200 text-sm leading-tight line-clamp-2 ">
+                    {cert.title}
+                  </h3>
+                  <p className="text-xs text-gray-400">{cert.provider}</p>
+                </div>
+                <button className="button-yellow mt-2">
+                  <span className="font-extrabold">{t("tools.click")}</span>
+                </button>
+              </motion.div>
+            ))}
           </div>
-          <h3 className="font-semibold text-yellow-200 text-sm leading-tight line-clamp-2 ">
-            {cert.title}
-          </h3>
-          <p className="text-xs text-gray-400">{cert.provider}</p>
-        </div>
-        <button className="button-yellow text-sm mt-2">Click</button>
-      </div>
-    ))}
-  </div>
-</div>
-</div>
-
+        </motion.div>
+      </motion.div>
 
       {/* MODAL */}
-      {isModalOpen && selectedItem && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-start justify-center overflow-x-auto z-50">
-          <div className="relative bg-neutral-900 text-white p-6 pt-10 rounded-xl h-[90vh] w-[90%] max-w-[500px] border border-yellow-400 shadow-lg mt-10 overflow-y-auto">
-            {/* Close Button */}
-            <button
-              className="absolute top-3 right-3 bg-yellow-500 text-black rounded-full w-8 h-8 flex items-center justify-center text-lg shadow hover:bg-yellow-400 transition"
-              onClick={closeModal}
-              aria-label="Close modal"
+      <AnimatePresence>
+        {isModalOpen && selectedItem && (
+          <motion.div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-start justify-center overflow-x-auto z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 0.2 } }}
+            exit={{ opacity: 0, transition: { duration: 0.15 } }}
+          >
+            <motion.div
+              className="relative bg-neutral-900 text-white p-6 pt-10 rounded-xl h-[90vh] w-[90%] max-w-[500px] border border-yellow-400 shadow-lg mt-10 overflow-y-auto"
+              initial={{ scale: 0.94, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1, transition: { duration: 0.25, ease: "easeOut" } }}
+              exit={{ scale: 0.96, opacity: 0, transition: { duration: 0.2 } }}
             >
-              ✕
-            </button>
+              {/* Close Button */}
+              <button
+                className="absolute top-3 right-3 bg-yellow-500 text-black rounded-full w-8 h-8 flex items-center justify-center text-lg shadow hover:bg-yellow-400 transition"
+                onClick={closeModal}
+                aria-label="Close modal"
+              >
+                ✕
+              </button>
 
-            {/* Image */}
-            <img
-              src={selectedItem.image}
-              alt={selectedItem.title}
-              className="rounded-md w-full object-contain mb-4 border"
-            />
+              {/* Image */}
+              <img
+                src={selectedItem.image}
+                alt={selectedItem.title}
+                className="rounded-md w-full object-contain mb-4 border"
+              />
 
-            {/* Title & Description */}
-            <h2 className="text-xl text-yellow-300 font-semibold">{selectedItem.title}</h2>
-            <p className="text-sm text-gray-300 mt-1">{selectedItem.provider}</p>
-            <p className="text-sm italic text-gray-400">{selectedItem.date}</p>
-
-            {/* Link */}
-            <a
-              href={selectedItem.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-sm text-blue-400 hover:underline"
-            >
-              View Certificate ↗
-            </a>
-          </div>
-        </div>
-      )}
+              {/* Title & Description */}
+              <h2 className="text-xl text-yellow-300 font-semibold">{selectedItem.title}</h2>
+              <p className="text-sm text-gray-300 mt-1">{selectedItem.provider}</p>
+              <p className="text-sm italic text-gray-400">{selectedItem.date}</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

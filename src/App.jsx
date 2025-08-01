@@ -26,24 +26,37 @@ function App() {
   }, []);
 
   // Horizontal scroll effect only for desktop
-  useEffect(() => {
-    if (isMobile) return; // Skip horizontal scroll on mobile
-    
-    const el = scrollRef.current;
-    
-    const handleWheel = (e) => {
-      if (el) {
-        e.preventDefault();
-        el.scrollLeft += e.deltaY;
-      }
-    };
+ useEffect(() => {
+  if (isMobile) return;
 
-    el?.addEventListener('wheel', handleWheel, { passive: false });
+  const el = scrollRef.current;
+  if (!el) return;
 
-    return () => {
-      el?.removeEventListener('wheel', handleWheel);
-    };
-  }, [isMobile]);
+  const SCROLL_MULTIPLIER = 3; // increase this to make scrolling faster
+
+  const handleWheel = (e) => {
+    e.preventDefault();
+
+    // Normalize so that line/page modes behave more consistently across devices
+    let delta = e.deltaY;
+    if (e.deltaMode === 1) {
+      // "line" mode — approximate to pixels
+      delta *= 16;
+    } else if (e.deltaMode === 2) {
+      // "page" mode — big jump
+      delta *= window.innerHeight;
+    }
+
+    el.scrollLeft += delta * SCROLL_MULTIPLIER;
+  };
+
+  el.addEventListener("wheel", handleWheel, { passive: false });
+
+  return () => {
+    el.removeEventListener("wheel", handleWheel);
+  };
+}, [isMobile]);
+
 
   return (
     <div className={`${isMobile ? 'h-auto min-h-screen' : 'h-screen'} w-screen ${isMobile ? 'overflow-auto' : 'overflow-hidden'} cursor-[url('/cursor.png'),_auto]`}>
