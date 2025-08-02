@@ -60,7 +60,7 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="mt-3 text-center text-neutral-700 text-xs italic border-t border-gray-300 pt-2">
+              <div className="mt-3 text-center text-neutral-700 md:text-md text-xs italic border-t border-gray-300 pt-2">
                 “The Digital Artisan”  
                 <br />
                 Portrait by Arzu, 2025
