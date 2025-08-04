@@ -62,8 +62,8 @@ const Content = () => {
       link: "https://www.instagram.com/p/DKuQGHcNKBA/",
     },
     {
-      text: "JET School Ghibli sehrinə büründü! ✨\n\nDərslərdən görüntülərə bir də Studio Ghibli üslubunda baxın! 😍",
-      link: "https://www.instagram.com/p/DH8l7lQNvlX/?igsh=MWcwbG05dGZ2NGJh",
+      text: "Tarixi memarlığa rəqəmsal baxış! 🏛\n\nİstedadlı tələbəmiz Hüseynin Tinkercad-də hazırladığı Kolizey layihəsi ilə tanış olun! ⚔\n\nBu videoda o bizə həm öz 3D modelini nümayiş etdirir, həm də ilham mənbəyindən və layihə üzərində necə çalışdığından danışır. 📹",
+      link: "https://www.instagram.com/reel/DM2ujuWtnQF/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
     },
     {
       text: "Texnologiya tarixini dəyişən qadınlar! 💻🚀💡\n\nOnların kəşfləri Wi-Fi, süni intellekt və hətta Aya uçuşların əsasında duran texnologiyaların inkişafına töhfə verib! 💪✨\n\nİstər texnologiya, istərsə də digər sahələrdə iz qoyan bütün qadınları təbrik edir, onlara xoşbəxtlik, uğur, güc və sağlamlıq arzulayırıq! 💐\n\nTexnologiya sahəsində çalışan, bu sahəyə yeni addım atan və ya bu yolda ilk addımlarını atmağı düşünən bütün qadınları dəstəkləyir və onlarla birlikdə daha parlaq gələcək qurmaqdan qürur duyuruq! 💻✨\n\n8 Mart – Beynəlxalq Qadınlar Gününüz mübarək! 🌸",
