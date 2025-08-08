@@ -55,7 +55,7 @@ const Hero = () => {
             >
               <div className="aspect-[2/3] overflow-hidden rounded-sm">
                 <img
-                  src="src/assets/hero.png"
+                  src="/assets/hero.png"
                   alt="Hero Portrait"
                   className="w-full h-full object-cover"
                 />
