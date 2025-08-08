@@ -18,14 +18,14 @@ const Achievements = () => {
       title: `🎯 ${t("achiev.head2")}`,
       description: `${t("achiev.desc2")}`,
       type: "image",
-      media: "/src/assets/designs/AI.png",
+      media: "assets/designs/AI.png",
       link: "https://www.canva.com/design/DAGeOl1c6pc/y02kiVpXShmWKWcd8y1XoA/edit?utm_content=DAGeOl1c6pc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
     },
     {
       title: `🔍 ${t("achiev.head3")}`,
       description: `${t("achiev.desc3")}`,
       type: "image",
-      media: "/src/assets/designs/seorank.png",
+      media: "assets/designs/seorank.png",
       link: "https://www.google.com/search?q=u%C5%9Faqlar+%C3%BC%C3%A7%C3%BCn+proqramla%C5%9Fd%C4%B1rma",
     },
   ];

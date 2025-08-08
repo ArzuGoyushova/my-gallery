@@ -27,35 +27,35 @@ const DesignGallery = () => {
   const topDesigns = [
     {
       title: "Süni İntellekt Mühəndisliyi - Banner",
-      image: "/src/assets/designs/AI.png",
+      image: "assets/designs/AI.png",
       link: "https://www.canva.com/design/DAGeOl1c6pc/y02kiVpXShmWKWcd8y1XoA/edit?utm_content=DAGeOl1c6pc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
         "AI kursu üçün hazırlanmış reklam banneri. Kursla bağlı əsas və diqqətçəkən məqamlar vizualda ön plana çıxarılıb. Kampaniya nəticəsində yüksək keyfiyyətli müraciətlər əldə olunub.",
     },
     {
       title: "Travel to China - Banner",
-      image: "/src/assets/designs/Travel.png",
+      image: "assets/designs/Travel.png",
       link: "https://www.canva.com/design/DAGrdJ8EunE/TiRyVdKaC9gtSWSN0_kYTQ/edit?utm_content=DAGrdJ8EunE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
         "Çin səfəri ilə bağlı kurs elanını təqdim etmək üçün sadə və diqqətçəkən tur banneri hazırlanmışdır. Dizayn Pinterest-də başqa bir dizayndan ilhamlanıb.",
     },
     {
       title: "Rus sektoru üçün banner",
-      image: "/src/assets/designs/schoolrussian.png",
+      image: "assets/designs/schoolrussian.png",
       link: "https://www.canva.com/design/your-link-here",
       description:
         "JET School-un rus sektoru üçün hazırlanmış reklam banneri. Kursla bağlı əsas və diqqətçəkən məqamlar vizualda ön plana çıxarılıb. Kampaniya nəticəsində yüksək keyfiyyətli müraciətlər əldə olunub.",
     },
     {
       title: "Python Əsasları - Açıq Dərs banneri",
-      image: "/src/assets/designs/schoolpython.png",
+      image: "assets/designs/schoolpython.png",
       link: "https://www.canva.com/design/DAGrc8VmdZE/MfkakrNdRiUtk3ff3ohB4w/edit?utm_content=DAGrc8VmdZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
         "Python ilə Back-End Proqramlaşdırma kursunun açıq dərsi üçün hazırlanmış banner.",
     },
     {
       title: "'Fərqi Yoxdu' Coffee Shop",
-      image: "/src/assets/designs/Fərqi yoxdu ad.png",
+      image: "assets/designs/Fərqi yoxdu ad.png",
       link: "https://www.canva.com/design/DAGr1TAeEis/PQb5kA5vRjrGS5VnxjKEOw/view?utm_content=DAGr1TAeEis&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha85e7a0086",
       description: `Layihə adı: 
 Fərqi Yoxdu Coffee Shop – Outdoor Banner Dizaynı 
@@ -74,13 +74,13 @@ Dizayn Yanaşması:
   const presentations = [
     {
       title: "Java Course - Market Research",
-      image: "/src/assets/designs/Java Research.png",
+      image: "assets/designs/Java Research.png",
       link: "https://www.canva.com/design/DAGW5mkuK9M/id808K8jAXrU_NKnmYu3XQ/edit?utm_content=DAGW5mkuK9M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description: "Introductory presentation for Python & AI course.",
     },
     {
       title: "General Course Presentation",
-      image: "/src/assets/designs/JET.png",
+      image: "assets/designs/JET.png",
       link: "https://www.canva.com/design/DAGoENxq6DU/P9w7do2DEJL8VsTFQ4Y9dg/edit?utm_content=DAGoENxq6DU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description: "Slides for our travel-themed digital design course.",
     },

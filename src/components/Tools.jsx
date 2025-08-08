@@ -9,7 +9,7 @@ const sliderSettings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
   responsive: [
@@ -84,43 +84,43 @@ const Tools = () => {
       title: "Fundamentals of Marketing",
       provider: "Google",
       link: "#",
-      image: "/src/assets/certs/fund.jpg",
+      image: "assets/certs/fund.jpg",
     },
     {
       title: "SEO",
       provider: "Hubspot",
       link: "#",
-      image: "/src/assets/certs/hubspot-seo.png",
+      image: "assets/certs/hubspot-seo.png",
     },
      {
       title: "Content Marketing",
       provider: "Hubspot",
       link: "#",
-      image: "/src/assets/certs/hub-content.jpeg",
+      image: "assets/certs/hub-content.jpeg",
     },
     {
       title: "Content Marketing",
       provider: "Semrush",
       link: "#",
-      image: "/src/assets/certs/semrush-content.jpg",
+      image: "assets/certs/semrush-content.jpg",
     },
     {
       title: "Lead Generation",
       provider: "Semrush",
       link: "#",
-      image: "/src/assets/certs/semrush-leads.jpg",
+      image: "assets/certs/semrush-leads.jpg",
     },
     {
       title: "Emoji Marketing",
       provider: "Semrush",
       link: "#",
-      image: "/src/assets/certs/semrush-emoji.jpg",
+      image: "assets/certs/semrush-emoji.jpg",
     },
     {
       title: "Google Analytics",
       provider: "Google",
       link: "#",
-      image: "/src/assets/certs/google-analytics.jpg",
+      image: "assets/certs/google-analytics.jpg",
     }
   ];
 
@@ -144,13 +144,13 @@ const Tools = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         {/* TOOLS SECTION */}
-        <motion.div className="md:w-1/4 w-full" variants={fadeUp}>
-          <h2 className="text-2xl text-yellow-300 mb-1">{t("tools.tool")}</h2>
-          <div className="flex flex-wrap gap-2 max-w-[800px]">
+        <motion.div className="md:w-1/3 w-full" variants={fadeUp}>
+          <h2 className="text-xl lg:text-3xl xl:text-5xl text-yellow-300 mb-2">{t("tools.tool")}</h2>
+          <div className="flex flex-wrap gap-2 ">
             {tools.map((tool, i) => (
               <motion.div
                 key={i}
-                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm flex items-center gap-2"
+                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm md:text-base lg:text-lg xl:text-xl flex items-center gap-2"
                 whileHover={!reduce ? { scale: 1.05 } : {}}
                 transition={{ type: "spring", stiffness: 250, damping: 20 }}
               >
@@ -162,7 +162,7 @@ const Tools = () => {
         </motion.div>
 
         {/* CERTIFICATES */}
-       <motion.div className="md:w-3/4 w-full" variants={fadeUp}>
+       <motion.div className="md:w-2/3 w-full" variants={fadeUp}>
   <h2 className="text-2xl text-yellow-300 mb-6">🎓 {t("tools.cert")}</h2>
   <Slider {...sliderSettings} className="certificates-slider">
     {certificates.map((cert, i) => (

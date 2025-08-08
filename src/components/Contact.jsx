@@ -27,7 +27,7 @@ const Contact = () => {
   const iconHover = reduce
     ? {}
     : {
-        scale: 1.15,
+        scale: 1.05,
         transition: { type: "spring", stiffness: 300, damping: 15 },
       };
 
@@ -57,7 +57,7 @@ const Contact = () => {
           variants={itemVariants}
         >
           <img
-            src="/src/assets/contact/IMG_6221.png" // Replace with your own avatar or logo
+            src="assets/contact/IMG_6221.png" 
             alt="Profile"
             className="w-24 h-24 mx-auto rounded-full object-cover mb-4 border border-yellow-300"
           />
@@ -87,7 +87,7 @@ const Contact = () => {
                 key={i}
                 className="flex items-center gap-4 group"
                 whileHover={iconHover}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.2 }}
               >
                 <Icon className="text-yellow-300 text-xl" />
                 <a

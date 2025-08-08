@@ -55,55 +55,61 @@ const About = () => {
         viewport={{ once: true, amount: 0.3 }}
         {...(reduce && { transition: { duration: 0 } })}
       >
-        <h2 className="text-4xl font-serif text-yellow-400 mb-4">
+        <h2 className="text-base xl:text-3xl 2xl:text-7xl hidden md:block text-base  font-serif text-yellow-400 mb-4">
           {t("about.intro.curator")}
         </h2>
-        <p className="text-lg text-wrap text-neutral-300 leading-relaxed border-l-4 border-yellow-600 pl-4">
+        <p className="text-sm md:text-base xl:text-lg 2xl:text-3xl hidden md:block text-wrap text-neutral-300 leading-relaxed border-l-4 border-yellow-600 pl-4">
           {t("about.intro.desc")}
         </p>
       </motion.div>
 
-      {/* Right Side: Skills */}
+     <motion.div
+  className="md:w-1/2 w-screen max-h-100 md:max-h-full md:overflow-y-auto py-4 md:overflow-visible mb-8 md:mb-0 grid grid-cols-2 gap-y-4 md:px-12 justify-items-center"
+  variants={containerVariant}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+>
+  {categories.map(({ titleKey, itemsKey }, i) => {
+    const items = t(itemsKey, { returnObjects: true }) || [];
+    return (
       <motion.div
-        className="md:w-1/2 w-screen max-h-100 md:max-h-full md:overflow-y-auto py-4 md:overflow-visible mb-8 md:mb-0 grid grid-cols-2 gap-y-4 md:px-12 justify-items-center"
-        variants={containerVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        key={titleKey}
+        className={`relative bg-white text-yellow-900 
+          w-40 sm:w-44 md:w-52 lg:w-56 xl:w-60 2xl:w-72
+          px-3 sm:px-4 py-2 sm:py-3
+          rounded-md shadow-lg border border-yellow-300 shrink-0
+          ${i % 2 === 0 ? "rotate-[-2deg]" : "rotate-[1.5deg]"}`}
+        variants={cardVariant}
+        whileHover={!reduce ? { scale: 1.03 } : {}}
+        whileTap={!reduce ? { scale: 0.97 } : {}}
+        transition={{ type: "spring", stiffness: 220, damping: 20 }}
       >
-        {categories.map(({ titleKey, itemsKey }, i) => {
-          const items = t(itemsKey, { returnObjects: true }) || [];
-          return (
-            <motion.div
-              key={titleKey}
-              className={`relative bg-white text-yellow-900 md:w-56 w-44 px-4 py-3 rounded-md shadow-lg border border-yellow-300 shrink-0 ${
-                i % 2 === 0 ? "rotate-[-2deg]" : "rotate-[1.5deg]"
-              }`}
-              variants={cardVariant}
-              whileHover={!reduce ? { scale: 1.03 } : {}}
-              whileTap={!reduce ? { scale: 0.97 } : {}}
-              transition={{ type: "spring", stiffness: 220, damping: 20 }}
-            >
-              {/* Pin */}
-              <div className="absolute top-[-10px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-600 rounded-full shadow-md z-10" />
-              <h4 className="text-sm font-bold text-yellow-700 mb-2">
-                {t(titleKey)}
-              </h4>
-              <ul className="space-y-1 text-sm">
-                {Array.isArray(items) &&
-                  items.map((item) => (
-                    <li
-                      key={item}
-                      className="before:content-['•'] before:mr-2 before:text-yellow-500"
-                    >
-                      {item}
-                    </li>
-                  ))}
-              </ul>
-            </motion.div>
-          );
-        })}
+        {/* Pin */}
+        <div className="absolute top-[-10px] left-1/2 transform -translate-x-1/2 w-3 sm:w-4 h-3 sm:h-4 bg-yellow-600 rounded-full shadow-md z-10" />
+
+        {/* Title */}
+        <h4 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-yellow-700 mb-2">
+          {t(titleKey)}
+        </h4>
+
+        {/* List */}
+        <ul className="space-y-0.5 sm:space-y-1 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg">
+          {Array.isArray(items) &&
+            items.map((item) => (
+              <li
+                key={item}
+                className="before:content-['•'] before:mr-1 md:before:mr-2 before:text-yellow-500"
+              >
+                {item}
+              </li>
+            ))}
+        </ul>
       </motion.div>
+    );
+  })}
+</motion.div>
+
     </section>
   );
 };

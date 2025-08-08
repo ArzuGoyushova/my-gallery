@@ -28,11 +28,11 @@ const Hero = () => {
         animate="visible"
         {...(reduce && { transition: { duration: 0 } })}
       >
-        <h1 className="md:text-[3.6rem] text-[2rem]  2xl:text-[5rem] leading-snug font-serif tracking-wide mb-4 text-neutral-100 text-wrap">
+        <h1 className=" text-xl md:text-3xl xl:text-5xl 2xl:text-[6rem] leading-snug font-serif tracking-wide mb-4 text-neutral-100 text-wrap">
           {t("hero.welcome")}
         </h1>
 
-        <p className="md:text-[1.2rem] text-[1rem] 2xl:text-[1.8rem] hidden md:block text-base  text-neutral-300 leading-relaxed font-light border-l-4 border-yellow-600 pl-4 text-wrap">
+        <p className=" text-sm md:text-base xl:text-xl 2xl:text-3xl hidden md:block text-base  text-neutral-300 leading-relaxed font-light border-l-4 border-yellow-600 pl-4 text-wrap">
           {t("hero.desc")}
         </p>
       </motion.div>
@@ -45,29 +45,30 @@ const Hero = () => {
         animate="visible"
         {...(reduce && { transition: { duration: 0 } })}
       >
-        <div className="max-w-[186px] md:max-w-[260px]  2xl:max-w-[400px] bg-neutral-900 shadow-xl rounded-md overflow-hidden">
-          <div className="rounded-md bg-gradient-to-br from-[#a97458] via-[#8B5E3C] to-[#5c3a22] p-[6px]">
-            <motion.div
-              className="bg-white p-2 rounded-sm"
-              whileHover={!reduce ? { scale: 1.03 } : {}}
-              whileTap={!reduce ? { scale: 0.97 } : {}}
-              transition={{ type: "spring", stiffness: 250, damping: 20 }}
-            >
-              <div className="aspect-[2/3] overflow-hidden rounded-sm">
-                <img
-                  src="/assets/hero.png"
-                  alt="Hero Portrait"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="mt-3 text-center text-neutral-700 md:text-md text-xs italic border-t border-gray-300 pt-2">
-                “The Digital Artisan”  
-                <br />
-                Portrait by Arzu, 2025
-              </div>
-            </motion.div>
-          </div>
-        </div>
+   <div className="w-[45vw] max-w-[800px] min-w-[150px] md:w-[20vw] mx-auto bg-neutral-900 shadow-xl rounded-md overflow-hidden">
+  <div className="rounded-md bg-gradient-to-br from-[#a97458] via-[#8B5E3C] to-[#5c3a22] p-[6px]">
+    <motion.div
+      className="bg-white p-3 rounded-sm"
+      whileHover={!reduce ? { scale: 1.03 } : {}}
+      whileTap={!reduce ? { scale: 0.97 } : {}}
+      transition={{ type: "spring", stiffness: 250, damping: 20 }}
+    >
+      <div className="aspect-[2/3] overflow-hidden rounded-sm">
+        <img
+          src="assets/hero.png"
+          alt="Hero Portrait"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="mt-3 text-center text-neutral-700 md:text-md text-sm italic border-t border-gray-300 pt-3 px-2">
+        “The Digital Artisan”  
+        <br />
+        Portrait by Arzu, 2025
+      </div>
+    </motion.div>
+  </div>
+</div>
+
       </motion.div>
     </section>
   );

@@ -48,7 +48,7 @@ const WebsiteManagement = () => {
   return (
     <section
       id="websiteManagement"
-      className=" w-full pt-6 px-4 sm:px-6 md:px-12 lg:px-20 text-white"
+      className=" w-full pt-6 px-4 sm:px-6 md:px-12 mt-4 lg:px-20 text-white shrink-0"
     >
       <motion.div
         variants={fadeUp}
@@ -62,8 +62,8 @@ const WebsiteManagement = () => {
 
         {/* Overview */}
         <div className="mb-6 max-w-3xl">
-          <p className="text-gray-300">{t("website.desc")}</p>
-          <p className="text-yellow-300 mt-2 underline">
+          <p className="text-gray-300 text-sm md:text-base lg:text-lg xl:text-xl text-wrap">{t("website.desc")}</p>
+          <p className="text-yellow-300 mt-2 text-sm md:text-base lg:text-lg xl:text-xl underline">
             <a href="https://jetschool.az" target="_blank" rel="noreferrer">
               {t("website.visit")}
             </a>
@@ -80,13 +80,13 @@ const WebsiteManagement = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div
-          className="flex flex-col sm:flex-row sm:items-center gap-2"
+          className="flex flex-col sm:items-center md:items-start gap-2"
           variants={fadeUp}
         >
-          <h2 className="text-xl text-yellow-300 flex items-center gap-2">
+          <h2 className="md:text-base lg:text-lg xl:text-2xl text-yellow-300 flex items-center gap-2">
             <FaSearch /> {t("website.google")}
           </h2>
-          <p className="text-sm text-gray-400 sm:ml-4">
+          <p className="text-sm md:text-base lg:text-lg  text-gray-400 sm:ml-4 display:block">
             {t("website.google-desc")}
           </p>
         </motion.div>
@@ -105,7 +105,7 @@ const WebsiteManagement = () => {
                 <p className="text-sm text-gray-400 break-words">
                   🔍 <span className="italic">"{result.keyword}"</span>
                 </p>
-                <p className="text-base sm:text-lg text-blue-400 font-medium truncate">
+                <p className="text-sm md:text-base lg:text-lg xl:text-xl text-blue-400 font-medium truncate">
                   {result.title}
                 </p>
                 <p className="text-sm text-green-400 truncate">{result.url}</p>
@@ -113,7 +113,7 @@ const WebsiteManagement = () => {
 
               {/* Right side */}
               <div className="mt-2 sm:mt-0 flex flex-col items-start sm:items-end gap-1">
-                <p className="text-sm text-yellow-300 font-semibold whitespace-nowrap">
+                <p className="text-sm md:text-base lg:text-lg  text-yellow-300 font-semibold whitespace-nowrap">
                   📍 {t("website.rank")} #{result.place}
                 </p>
                 <a

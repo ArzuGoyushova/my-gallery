@@ -322,7 +322,7 @@ const Content = () => {
 
       {/* Bottom Half */}
       <motion.div
-        className="flex flex-col lg:flex-row gap-8 px-4 md:px-8 py-4 relative z-10"
+        className="flex flex-col xl:mt-20 lg:flex-row gap-8 px-4 md:px-8 py-4 relative z-10"
         variants={containerStagger}
         initial="hidden"
         whileInView="visible"
@@ -330,10 +330,10 @@ const Content = () => {
       >
         {/* Captions panel */}
         <motion.div
-          className="flex-shrink-0 w-full lg:w-1/3 min-w-0 max-w-xl p-6"
+          className="flex-shrink-0 w-full lg:w-1/3  min-w-0 max-w-xl p-6"
           variants={fadeUp}
         >
-          <h2 className="text-2xl font-serif text-yellow-400 mb-4">
+          <h2 className="text-2xl lg:text-5xl font-serif text-yellow-400 mb-4">
             {t("content.caption")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -348,12 +348,12 @@ const Content = () => {
                   whileHover={!reduce ? { scale: 1.02 } : {}}
                   transition={{ type: "spring", stiffness: 200, damping: 18 }}
                 >
-                  <p className="text-black/60 text-sm leading-snug line-clamp-3 pr-8">
+                  <p className="text-black/60 text-sm md:text-base lg:text-lg xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
                     {text}
                   </p>
                   <div className="absolute bottom-2 right-2 flex gap-2">
                     <button
-                      className="button-yellow"
+                      className="button-yellow text-sm md:text-base lg:text-lg xl:text-xl"
                       onClick={() => openCaptionModal(text, link)}
                     >
                       {t("content.read-more")}
@@ -370,7 +370,7 @@ const Content = () => {
           className="flex-shrink-0 w-full lg:w-1/3 min-w-0 max-w-xl p-6"
           variants={fadeUp}
         >
-          <h2 className="text-2xl font-serif text-yellow-400 mb-4">
+          <h2 className="text-2xl lg:text-5xl font-serif text-yellow-400 mb-4">
             {t("content.video-scripts")}
           </h2>
           <div className="flex gap-4 overflow-x-auto pb-2">
@@ -379,7 +379,7 @@ const Content = () => {
               return (
                 <motion.div
                   key={video.id}
-                  className="relative w-36 sm:w-40 h-56 sm:h-60 shadow-lg bg-gray-200 border flex-shrink-0 rounded-md overflow-hidden"
+                  className="relative w-1/3 sm:w-40 h-56 sm:h-60 shadow-lg bg-gray-200 border flex-shrink-0 rounded-md overflow-hidden"
                   variants={fadeUp}
                   whileHover={!reduce ? { scale: 1.03 } : {}}
                   transition={{ type: "spring", stiffness: 220, damping: 20 }}
@@ -407,7 +407,7 @@ const Content = () => {
           className="flex-shrink-0 w-full lg:w-1/3 min-w-0 max-w-xl p-6"
           variants={fadeUp}
         >
-          <h2 className="text-2xl font-serif text-yellow-400 mb-4">
+          <h2 className="text-2xl lg:text-5xl font-serif text-yellow-400 mb-4">
             {t("content.content-ideas")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -422,7 +422,7 @@ const Content = () => {
                   whileHover={!reduce ? { scale: 1.02 } : {}}
                   transition={{ type: "spring", stiffness: 200, damping: 18 }}
                 >
-                  <p className="text-black/60 text-sm leading-snug line-clamp-2 pr-8">
+                  <p className="text-black/60 text-sm md:text-base lg:text-lg xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
                     {text}
                   </p>
                   <div className="absolute bottom-2 right-2 flex gap-2">
