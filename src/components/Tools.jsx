@@ -1,6 +1,32 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1.2,
+      },
+    },
+  ],
+};
 
 const containerStagger = {
   hidden: {},
@@ -66,6 +92,12 @@ const Tools = () => {
       link: "#",
       image: "/src/assets/certs/hubspot-seo.png",
     },
+     {
+      title: "Content Marketing",
+      provider: "Hubspot",
+      link: "#",
+      image: "/src/assets/certs/hub-content.jpeg",
+    },
     {
       title: "Content Marketing",
       provider: "Semrush",
@@ -89,25 +121,7 @@ const Tools = () => {
       provider: "Google",
       link: "#",
       image: "/src/assets/certs/google-analytics.jpg",
-    },
-    {
-      title: "Fundamentals of Marketing",
-      provider: "Google",
-      link: "#",
-      image: "/src/assets/certs/semrush-emoji.jpg",
-    },
-    {
-      title: "SEO",
-      provider: "Hubspot",
-      link: "#",
-      image: "/src/assets/certs/semrush-leads.jpg",
-    },
-    {
-      title: "Emoji Marketing",
-      provider: "Semrush",
-      link: "#",
-      image: "/src/assets/certs/semrush-emoji.jpg",
-    },
+    }
   ];
 
   return (
@@ -148,37 +162,39 @@ const Tools = () => {
         </motion.div>
 
         {/* CERTIFICATES */}
-        <motion.div className="md:w-3/4 w-full" variants={fadeUp}>
-          <h2 className="text-2xl text-yellow-300 mb-2">🎓 {t("tools.cert")}</h2>
-          <div className="flex gap-4 flex-wrap">
-            {certificates.map((cert, i) => (
-              <motion.div
-                key={i}
-                onClick={() => openModal(cert)}
-                className="cursor-pointer bg-neutral-800 md:w-[200px] w-full h-auto border border-yellow-500 rounded-lg p-3 shadow-md hover:bg-neutral-700 transition flex flex-col justify-between"
-                whileHover={!reduce ? { scale: 1.02 } : {}}
-                transition={{ type: "spring", stiffness: 220, damping: 18 }}
-              >
-                <div>
-                  <div className="w-full md:h-[120px] h-auto mb-2">
-                    <img
-                      src={cert.image}
-                      alt={`${cert.title} Certificate`}
-                      className="w-full h-full object-cover rounded-md border border-yellow-400"
-                    />
-                  </div>
-                  <h3 className="font-semibold text-yellow-200 text-sm leading-tight line-clamp-2 ">
-                    {cert.title}
-                  </h3>
-                  <p className="text-xs text-gray-400">{cert.provider}</p>
-                </div>
-                <button className="button-yellow mt-2">
-                  <span className="font-extrabold">{t("tools.click")}</span>
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+       <motion.div className="md:w-3/4 w-full" variants={fadeUp}>
+  <h2 className="text-2xl text-yellow-300 mb-6">🎓 {t("tools.cert")}</h2>
+  <Slider {...sliderSettings} className="certificates-slider">
+    {certificates.map((cert, i) => (
+      <motion.div
+        key={i}
+        onClick={() => openModal(cert)}
+        className="cursor-pointer bg-neutral-800 border border-yellow-500 rounded-lg p-3 shadow-md hover:bg-neutral-700 transition flex flex-col justify-between"
+        whileHover={!reduce ? { scale: 1.02 } : {}}
+        transition={{ type: "spring", stiffness: 220, damping: 18 }}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+      >
+        <div className="w-full h-[140px] mb-2">
+          <img
+            src={cert.image}
+            alt={`${cert.title} Certificate`}
+            className="w-full h-full object-cover rounded-md border border-yellow-400"
+          />
+        </div>
+        <h3 className="font-semibold text-yellow-200 text-sm leading-tight line-clamp-2">
+          {cert.title}
+        </h3>
+        <p className="text-xs text-gray-400">{cert.provider}</p>
+        <button className="button-yellow mt-3 self-start">
+          <span className="font-extrabold">{t("tools.click")}</span>
+        </button>
+      </motion.div>
+    ))}
+  </Slider>
+</motion.div>
+
       </motion.div>
 
       {/* MODAL */}
