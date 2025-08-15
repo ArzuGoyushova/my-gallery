@@ -16,10 +16,10 @@ const Hero = () => {
   const reduce = useReducedMotion();
 
   return (
-    <section
-      id="home"
-      className="w-[100vw] md:w-screen md:h-screen md:shrink-0 relative md:flex flex-row items-center md:justify-between px-6 md:ps-24 text-white"
-    >
+   <section
+  id="home"
+  className="w-full md:w-screen md:h-screen md:shrink-0 relative md:flex flex-row items-center md:justify-between px-6 md:px-24 lg:px-32 text-white"
+>
       {/* Left: Wall Text */}
       <motion.div
         className="md:w-1/2 w-full p-12 md:p-6 md:text-start text-center"
@@ -28,7 +28,7 @@ const Hero = () => {
         animate="visible"
         {...(reduce && { transition: { duration: 0 } })}
       >
-        <h1 className=" text-xl md:text-3xl xl:text-5xl 2xl:text-[6rem] leading-snug font-serif tracking-wide mb-4 text-neutral-100 text-wrap">
+        <h1 className="ms-12 text-xl md:text-3xl xl:text-5xl 2xl:text-[6rem] leading-snug font-serif tracking-wide mb-4 text-neutral-100 text-wrap">
           {t("hero.welcome")}
         </h1>
 

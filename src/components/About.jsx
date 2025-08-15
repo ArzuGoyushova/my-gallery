@@ -89,12 +89,12 @@ const About = () => {
         <div className="absolute top-[-10px] left-1/2 transform -translate-x-1/2 w-3 sm:w-4 h-3 sm:h-4 bg-yellow-600 rounded-full shadow-md z-10" />
 
         {/* Title */}
-        <h4 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold text-yellow-700 mb-2">
+        <h4 className="text-xs sm:text-sm md:text-base 2xl:text-lg font-bold text-yellow-700 mb-2">
           {t(titleKey)}
         </h4>
 
         {/* List */}
-        <ul className="space-y-0.5 sm:space-y-1 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg">
+        <ul className="space-y-0.5 sm:space-y-1 text-xs sm:text-sm md:text-base xl:text-base">
           {Array.isArray(items) &&
             items.map((item) => (
               <li

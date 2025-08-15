@@ -26,7 +26,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-const scaleHover = !0; // placeholder: we'll conditionally apply in JSX
+const scaleHover = !0;
 
 const Content = () => {
   const { t } = useTranslation();
@@ -58,7 +58,7 @@ const Content = () => {
 
   const captions = [
     {
-      text: "IT Mühəndis kursumuzda təhsil tamamilə praktika əsaslıdır! 🔧\n\nBu videoda tələbələrimiz turniket sisteminin qurulması prosesini yerində öyrənirlər.\n\nMüəllimin dəstəyi ilə turniket açılır, daxili sistemlər yoxlanılır və kabel bağlantıları düzgün şəkildə qoşulur. 🧰\n\nBu cür real avadanlıq üzərində keçirilən praktiki dərslər, tələbələrimizin yalnız nəzəri bilik deyil, həm də peşəkar təcrübə qazanmasına şərait yaradır. 💡",
+      text: "Tom artıq Jerry-ni qovmur — indi hakerlərin izinə düşüb! 🐭💻\n\Dünya Pişiklər Günü münasibətilə uşaqlığımızın məşhur pişik qəhrəmanlarının texnologiya sahələrindəki “karyera dəyişikliklərini” sizə təqdim edirik. 😹\n\Bəs sizin ən sevdiyiniz pişik qəhrəman kimdir? Rəy bölməsində bizimlə paylaşın! 💬🐾",
       link: "https://www.instagram.com/p/DKuQGHcNKBA/",
     },
     {
@@ -83,7 +83,7 @@ const Content = () => {
     {
       text: "🐥 Əgər mən Duolingo-nun Marketinq komandasında olsaydım, aşağıdakı kreativ ideyaları təklif edərdim:\n\nAygün Kazımovanın S.O.S klipinin parodiyasını yaratmaq: Duolingo quşu ilə bu məşhur videonu yenidən canlandıraraq həm nostalji, həm də əyləncəli kontent təqdim etmək.\n\nDuo quşunu ikonik məkanlarda fotosessiyalara çıxarmaq: Məsələn, Crescent Mall, İçərişəhər və ya Flame Towers kimi tanınmış yerlərdə foto və video çəkilişlər.\n\nMəşhur “Mənə çay verərsən?” videosunun parodiyası: Duo quşunu bu səhnəyə daxil etməklə həm lokal mədəniyyəti vurğulamaq, həm də viral potensial yaratmaq.\n\n“Dünyanın ən hündür bayrağı” önündə çəkiliş: Milli qürur elementlərini yumorla birləşdirərək izləyicilərlə emosional bağ qurmaq.",
     },
-    { text: "🎥 Video Series: 'Behind the Rebrand' — storytelling via transformation journey." },
+    { text: "Informativ video ideyası: Authentication və Authorization - real həyat nümunəsi ilə izahı:\n\nVizual Konsept:\nŞagird və ya nümayişçi qapı qarşısında dayanır.\n\nAuthentication: Mühafizəçi şəxsiyyət vəsiqəsini tələb edir və yoxlayır. (Kim olduğunu təsdiqləyir)\n\nAuthorization: Binaya daxil olduqdan sonra fərqli qapılar göstərilir. Eyni açarla bəzilərini açmaq mümkündür, bəzilərini yox. (Hansı resurslara icazəsi olduğunu göstərir)\n\nMesaj:\nAuthentication = “Bu insan kimdir?”\nAuthorization = “Bu insan nə edə bilər?”\nİkisi birlikdə sistemin təhlükəsizliyini təmin edir.\n\nPortfolio üçün Qeyd: Bu ideya texniki anlayışları real vizuallaşdıraraq izah etməyə imkan verir və praktik nümayişlə yadda qalan təqdimat yaradır." },
     {
       text: "🎯 Idea: 'Brand Archetypes Quiz' — funnel entry through a personality quiz.",
       link: "https://instagram.com/p/xyz456",
@@ -311,7 +311,7 @@ const Content = () => {
                 >
                   {icon}
                 </div>
-                <p className="text-[10px] text-yellow-200 mt-1 font-light uppercase tracking-wider whitespace-nowrap group-hover:underline">
+                <p className="mt-1 text-[10px] text-yellow-200 mt-1 font-light uppercase tracking-wider whitespace-nowrap group-hover:underline">
                   {name}
                 </p>
               </motion.a>
@@ -333,7 +333,7 @@ const Content = () => {
           className="flex-shrink-0 w-full lg:w-1/3  min-w-0 max-w-xl p-6"
           variants={fadeUp}
         >
-          <h2 className="text-2xl lg:text-5xl font-serif text-yellow-400 mb-4">
+          <h2 className="text-3xl 2xl:text-5xl font-serif text-yellow-400 mb-4">
             {t("content.caption")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -348,7 +348,7 @@ const Content = () => {
                   whileHover={!reduce ? { scale: 1.02 } : {}}
                   transition={{ type: "spring", stiffness: 200, damping: 18 }}
                 >
-                  <p className="text-black/60 text-sm md:text-base lg:text-lg xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
+                  <p className="text-black/60 text-sm md:text-base 2xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
                     {text}
                   </p>
                   <div className="absolute bottom-2 right-2 flex gap-2">
@@ -370,7 +370,7 @@ const Content = () => {
           className="flex-shrink-0 w-full lg:w-1/3 min-w-0 max-w-xl p-6"
           variants={fadeUp}
         >
-          <h2 className="text-2xl lg:text-5xl font-serif text-yellow-400 mb-4">
+          <h2 className="text-3xl 2xl:text-5xl font-serif text-yellow-400 mb-4">
             {t("content.video-scripts")}
           </h2>
           <div className="flex gap-4 overflow-x-auto pb-2">
@@ -407,7 +407,7 @@ const Content = () => {
           className="flex-shrink-0 w-full lg:w-1/3 min-w-0 max-w-xl p-6"
           variants={fadeUp}
         >
-          <h2 className="text-2xl lg:text-5xl font-serif text-yellow-400 mb-4">
+          <h2 className="text-3xl 2xl:text-5xl font-serif text-yellow-400 mb-4">
             {t("content.content-ideas")}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -422,7 +422,7 @@ const Content = () => {
                   whileHover={!reduce ? { scale: 1.02 } : {}}
                   transition={{ type: "spring", stiffness: 200, damping: 18 }}
                 >
-                  <p className="text-black/60 text-sm md:text-base lg:text-lg xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
+                  <p className="text-black/60 text-sm md:text-base 2xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
                     {text}
                   </p>
                   <div className="absolute bottom-2 right-2 flex gap-2">
