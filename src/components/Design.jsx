@@ -26,14 +26,14 @@ const DesignGallery = () => {
 
   const topDesigns = [
     {
-      title: "Süni İntellekt Mühəndisliyi - Banner",
+      title: "Süni İntellekt Mühəndisliyi",
       image: "assets/designs/AI.png",
       link: "https://www.canva.com/design/DAGeOl1c6pc/y02kiVpXShmWKWcd8y1XoA/edit?utm_content=DAGeOl1c6pc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
         "AI kursu üçün hazırlanmış reklam banneri. Kursla bağlı əsas və diqqətçəkən məqamlar vizualda ön plana çıxarılıb. Kampaniya nəticəsində yüksək keyfiyyətli müraciətlər əldə olunub.",
     },
     {
-      title: "Travel to China - Banner",
+      title: "Travel to China",
       image: "assets/designs/Travel.png",
       link: "https://www.canva.com/design/DAGrdJ8EunE/TiRyVdKaC9gtSWSN0_kYTQ/edit?utm_content=DAGrdJ8EunE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
@@ -47,7 +47,7 @@ const DesignGallery = () => {
         "JET School-un rus sektoru üçün hazırlanmış reklam banneri. Kursla bağlı əsas və diqqətçəkən məqamlar vizualda ön plana çıxarılıb. Kampaniya nəticəsində yüksək keyfiyyətli müraciətlər əldə olunub.",
     },
     {
-      title: "Python Əsasları - Açıq Dərs banneri",
+      title: "Python Əsasları - Açıq Dərs",
       image: "assets/designs/schoolpython.png",
       link: "https://www.canva.com/design/DAGrc8VmdZE/MfkakrNdRiUtk3ff3ohB4w/edit?utm_content=DAGrc8VmdZE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       description:
@@ -138,7 +138,7 @@ Dizayn Yanaşması:
         <h1 className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 text-center md:text-start">
           🎨 {t("design.title")}
         </h1>
-        <p className="text-gray-400 max-w-2xl mt-2">{t("design.desc")}</p>
+        <p className=" desc text-gray-400 max-w-2xl mt-2">{t("design.desc")}</p>
       </motion.div>
 
       {/* Content Section */}
@@ -151,7 +151,7 @@ Dizayn Yanaşması:
       >
         {/* Slider Section */}
         <motion.div className="md:w-1/2 w-full" variants={fadeUp}>
-          <h2 className="text-2xl font-semibold text-yellow-300 mb-4">
+          <h2 className="desc text-2xl font-semibold text-yellow-300 mb-4">
             🖼️ {t("design.banners")}
           </h2>
           <Slider {...sliderSettings}>

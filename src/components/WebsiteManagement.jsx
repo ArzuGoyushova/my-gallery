@@ -61,14 +61,18 @@ const WebsiteManagement = () => {
         </h1>
 
         {/* Overview */}
-        <div className="mb-6 max-w-3xl">
-          <p className="text-gray-300 text-sm md:text-base lg:text-lg xl:text-xl text-wrap">{t("website.desc")}</p>
-          <p className="text-yellow-300 mt-2 text-sm md:text-base lg:text-lg xl:text-xl underline">
-            <a href="https://jetschool.az" target="_blank" rel="noreferrer">
-              {t("website.visit")}
-            </a>
-          </p>
-        </div>
+       <div className="mb-6 max-w-3xl">
+        <div className="py-1">
+  <p className="text-gray-300 text-sm md:text-base lg:text-lg xl:text-xl">{t("website.desc")}</p>
+  </div>
+  <div className="py-1">
+  <p className="text-yellow-300 text-sm md:text-base lg:text-lg xl:text-xl underline">
+    <a href="https://jetschool.az" target="_blank" rel="noreferrer">
+      {t("website.visit")}
+    </a>
+  </p>
+  </div>
+</div>
       </motion.div>
 
       {/* SEO Search Result Showcase */}
@@ -80,7 +84,7 @@ const WebsiteManagement = () => {
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.div
-          className="flex flex-col sm:items-center md:items-start gap-2"
+          className="desc flex flex-col sm:items-center md:items-start gap-2"
           variants={fadeUp}
         >
           <h2 className="md:text-base lg:text-lg xl:text-2xl text-yellow-300 flex items-center gap-2">
@@ -91,7 +95,7 @@ const WebsiteManagement = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-4">
+        <div className="!space-y-4">
           {searchResults.map((result, i) => (
             <motion.div
               key={i}

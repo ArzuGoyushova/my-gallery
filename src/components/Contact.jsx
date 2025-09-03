@@ -37,7 +37,7 @@ const Contact = () => {
       className="min-h-screen min-w-screen flex flex-col items-center py-18 px-6 text-white shrink-0"
     >
       <motion.h1
-        className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-10"
+        className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 !mb-10"
         initial="hidden"
         animate="visible"
         variants={itemVariants}
@@ -53,15 +53,15 @@ const Contact = () => {
       >
         {/* Left Card */}
         <motion.div
-          className="w-full md:w-1/3 bg-neutral-800 p-6 rounded-xl text-center border border-yellow-400 shadow-md"
+          className="w-full md:w-1/3 bg-neutral-800 p-6 rounded-xl  border border-yellow-400 shadow-md"
           variants={itemVariants}
         >
           <img
             src="assets/contact/IMG_6221.png" 
             alt="Profile"
-            className="w-24 h-24 mx-auto rounded-full object-cover mb-4 border border-yellow-300"
+            className="w-24 h-24 mx-auto rounded-full object-cover !mb-4 border border-yellow-300"
           />
-          <h2 className="text-xl font-bold text-yellow-300 mb-1">
+          <h2 className="text-xl font-bold text-yellow-300 !mb-1">
             {t("contact.name")}
           </h2>
           <p className="text-sm text-gray-400">{t("contact.job-title")}</p>
@@ -72,11 +72,11 @@ const Contact = () => {
           className="w-full md:w-2/3"
           variants={itemVariants}
         >
-          <p className="text-gray-300 mb-6 leading-relaxed text-wrap">
+          <p className="text-gray-300 !mb-6 leading-relaxed text-wrap">
             {t("contact.desc1")}
           </p>
 
-          <div className="space-y-5">
+          <div className="!space-y-5">
             {[ 
               { icon: FaEnvelope, href: "mailto:arzugoyushova16@gmail.com", text: "arzugoyushova16@gmail.com" },
               { icon: FaLinkedin, href: "https://www.linkedin.com/in/arzugoyushova/", text: "linkedin.com/in/arzugoyushova" },
@@ -103,7 +103,7 @@ const Contact = () => {
             ))}
           </div>
 
-          <p className="text-sm text-gray-500 italic mt-10">
+          <p className="text-sm text-gray-500 italic !mt-10">
             {t("contact.desc2")}
           </p>
         </motion.div>

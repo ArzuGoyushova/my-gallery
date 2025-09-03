@@ -173,12 +173,13 @@ const Content = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div
-              className="bg-white max-w-2xl w-full p-6 rounded-lg shadow-lg relative"
-              initial={{ scale: 0.94, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1, transition: { duration: 0.25, ease: "easeOut" } }}
-              exit={{ scale: 0.96, opacity: 0, transition: { duration: 0.2 } }}
-            >
+         <motion.div
+  className="bg-white max-w-2xl w-full p-6 rounded-lg shadow-lg relative
+             max-h-[90vh] overflow-y-auto"
+  initial={{ scale: 0.94, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1, transition: { duration: 0.25, ease: "easeOut" } }}
+  exit={{ scale: 0.96, opacity: 0, transition: { duration: 0.2 } }}
+>
               <button
                 className="button-yellow absolute top-2 right-2 text-gray-500 hover:text-black"
                 onClick={closeModal}

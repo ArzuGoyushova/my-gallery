@@ -23,7 +23,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.desc{
+  margin-top: 6px;
+   margin-bottom: 6px;
+}
 a {
   font-weight: 500;
   text-decoration: inherit;
@@ -153,10 +156,7 @@ body {
   padding: 0;
   min-height: 100vh;
   background-color: #011930;
-  background-image:
-    linear-gradient(to right, rgba(79, 79, 79, 0.18) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(79, 79, 79, 0.18) 1px, transparent 1px);
-  background-size: 14px 24px;
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
   background-repeat: repeat;
   position: relative;
   }

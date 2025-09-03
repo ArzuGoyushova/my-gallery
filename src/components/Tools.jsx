@@ -145,7 +145,7 @@ const Tools = () => {
       >
         {/* TOOLS SECTION */}
         <motion.div className="md:w-1/3 w-full" variants={fadeUp}>
-          <h2 className="text-xl lg:text-3xl xl:text-5xl text-yellow-300 mb-2">{t("tools.tool")}</h2>
+          <h2 className="desc text-xl lg:text-3xl xl:text-5xl text-yellow-300 mb-2">{t("tools.tool")}</h2>
           <div className="flex flex-wrap gap-2 ">
             {tools.map((tool, i) => (
               <motion.div
@@ -163,7 +163,7 @@ const Tools = () => {
 
         {/* CERTIFICATES */}
        <motion.div className="md:w-2/3 w-full" variants={fadeUp}>
-  <h2 className="text-2xl text-yellow-300 mb-6">🎓 {t("tools.cert")}</h2>
+  <h2 className="desc text-2xl text-yellow-300 mb-6">🎓 {t("tools.cert")}</h2>
   <Slider {...sliderSettings} className="certificates-slider">
     {certificates.map((cert, i) => (
       <motion.div
