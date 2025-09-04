@@ -26,12 +26,12 @@ const LanguageSwitcher = () => {
           rounded-md
           bg-black/50 hover:bg-white/10
           transition
-          text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl
+          text-sm md:text-base lg:text-lg 
           font-semibold
         "
       >
         {displayLang}
-        <FaChevronDown className="text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl" />
+        <FaChevronDown className="text-sm md:text-base lg:text-lg" />
       </button>
 
       {dropdownOpen && (
@@ -40,7 +40,7 @@ const LanguageSwitcher = () => {
             absolute left-0 mt-1 w-full
             bg-black border border-white rounded-md
             z-50
-            text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-3xl
+            text-sm md:text-base lg:text-lg
           "
         >
           {currentLang !== "en" && (

@@ -151,15 +151,17 @@ body {
 }
 
 @media (max-width: 767px) {
-  body {
+body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background-color: #011930;
-  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-  background-repeat: repeat;
-  position: relative;
-  }
+  background: radial-gradient(circle at top left, #1a1c3d, #0a0c2e 70%) repeat;
+  background-color: #030528;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
 }
 .certificates-slider .slick-slide {
   padding: 0 8px;

@@ -46,14 +46,14 @@ const Contact = () => {
       </motion.h1>
 
       <motion.div
-        className="w-full max-w-5xl flex flex-col md:flex-row gap-10 items-center md:items-start bg-neutral-900 rounded-2xl shadow-lg p-8 border border-yellow-500"
+        className="w-full max-w-5xl flex flex-col md:flex-row gap-10 items-center md:items-center text-start bg-neutral-900 rounded-2xl shadow-lg p-8 border border-yellow-500"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         {/* Left Card */}
         <motion.div
-          className="w-full md:w-1/3 bg-neutral-800 p-6 rounded-xl  border border-yellow-400 shadow-md"
+          className="w-full md:w-1/3 bg-neutral-800 p-6 rounded-xl border border-yellow-400 shadow-md"
           variants={itemVariants}
         >
           <img

@@ -193,7 +193,7 @@ const Content = () => {
                   <h3 className="text-lg font-semibold mb-4 text-yellow-500">
                     {t("content.full-version")}
                   </h3>
-                  <p className="text-sm text-gray-800 whitespace-pre-line mb-4">
+                  <p className="text-gray-800 whitespace-pre-line mb-4">
                     {selectedCaption.text}
                   </p>
 
@@ -349,7 +349,7 @@ const Content = () => {
                   whileHover={!reduce ? { scale: 1.02 } : {}}
                   transition={{ type: "spring", stiffness: 200, damping: 18 }}
                 >
-                  <p className="text-black/60 text-sm md:text-base 2xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
+                  <p className="text-black/60 text-sm md:text-base leading-snug text-wrap line-clamp-2 pr-8">
                     {text}
                   </p>
                   <div className="absolute bottom-2 right-2 flex gap-2">
@@ -423,7 +423,7 @@ const Content = () => {
                   whileHover={!reduce ? { scale: 1.02 } : {}}
                   transition={{ type: "spring", stiffness: 200, damping: 18 }}
                 >
-                  <p className="text-black/60 text-sm md:text-base 2xl:text-xl leading-snug text-wrap line-clamp-2 pr-8">
+                  <p className="text-black/60 text-sm md:text-base leading-snug text-wrap line-clamp-2 pr-8">
                     {text}
                   </p>
                   <div className="absolute bottom-2 right-2 flex gap-2">

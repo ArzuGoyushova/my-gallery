@@ -66,7 +66,7 @@ const Achievements = () => {
       className="min-h-screen px-10 py-16 text-white min-w-screen shrink-0"
     >
       <motion.h1
-        className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-12 text-center"
+        className="text-2xl lg:text-4xl 2xl:text-5xl font-bold text-yellow-400 !mb-6 text-center"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

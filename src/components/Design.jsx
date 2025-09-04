@@ -135,7 +135,7 @@ Dizayn Yanaşması:
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h1 className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 text-center md:text-start">
+        <h1 className="text-2xl lg:text-4xl 2xl:text-5xl font-bold text-yellow-400 text-center md:text-start">
           🎨 {t("design.title")}
         </h1>
         <p className=" desc text-gray-400 max-w-2xl mt-2">{t("design.desc")}</p>

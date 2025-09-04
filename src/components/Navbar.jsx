@@ -34,89 +34,91 @@ const Navbar = () => {
   return (
     <>
       {/* Language Switcher - always top left */}
-      <div className="fixed top-2 left-4 z-50">
-        <LanguageSwitcher />
-      </div>
+<div className="fixed top-2 left-4 z-50">
+  <LanguageSwitcher />
+</div>
 
-      {/* Desktop Vertical Navbar */}
-      <nav
+{/* Desktop Vertical Navbar */}
+<nav
+  role="navigation"
+  className="
+    hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 z-40
+    flex-col items-center gap-2
+    bg-black/60 rounded-xl py-2 px-2
+  "
+>
+  {sections.map(({ id, icon, labelKey }) => (
+    <a
+      key={id}
+      href={`#${id}`}
+      className="
+        group relative flex items-center justify-center
+        text-white rounded-full hover:bg-black/70 transition
+        p-2 md:p-2 lg:p-3
+      "
+    >
+      <span className="text-base sm:text-lg md:text-xl lg:text-2xl select-none">
+        {icon}
+      </span>
+      {/* Tooltip - only on desktop */}
+      <span
         className="
-          hidden md:flex fixed left-4 top-1/2 -translate-y-1/2 z-40
-          flex-col items-center gap-3
-          bg-black/60 rounded-xl py-3 px-2
+          hidden md:block
+          absolute left-12 whitespace-nowrap
+          opacity-0 group-hover:opacity-100
+          translate-x-2 group-hover:translate-x-0
+          transition-all duration-300
+          bg-black/80 text-white text-xs sm:text-sm
+          font-medium px-2 py-1 rounded-md
+          select-none 2xl:text-xl
         "
       >
-        {sections.map(({ id, icon, labelKey }) => (
-          <a
-            key={id}
-            href={`#${id}`}
-            className="
-              group relative flex items-center justify-center
-              text-white p-3 rounded-full hover:bg-black/70 transition
-              md:p-2 lg:p-3 xl:p-3 2xl:p-5
-            "
-          >
-            <span className="
-              text-lg md:text-xl lg:text-xl xl:text-2xl 2xl:text-4xl
-              select-none
-            ">
-              {icon}
-            </span>
-            <span
-              className="
-                absolute left-14 whitespace-nowrap
-                opacity-0 group-hover:opacity-100
-                translate-x-2 group-hover:translate-x-0
-                transition-all duration-300
-                bg-black/80 text-white text-xs md:text-sm lg:text-sm xl:text-base
-                font-semibold px-3 py-1 rounded-md
-                select-none
-              "
-            >
-              {t(labelKey)}
-            </span>
-          </a>
-        ))}
-      </nav>
+        {t(labelKey)}
+      </span>
+    </a>
+  ))}
+</nav>
 
-      {/* Hamburger Button on Mobile */}
-      <button
-        className="
-          fixed top-4 right-4 z-50 p-3
-          text-white bg-black/60 rounded-md md:hidden
-          md:p-3 lg:p-4 xl:p-4 2xl:p-6
-        "
-        onClick={toggleMenu}
-        aria-label={isOpen ? "Close menu" : "Open menu"}
-      >
-        {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
-      </button>
+{/* Mobile Slide-out Menu */}
+<div
+  className={`
+    fixed top-0 right-0 h-full w-3/4 sm:w-2/5 max-w-xs bg-black z-40
+    flex flex-col items-start pt-16 px-5 gap-5
+    transition-transform duration-300 ease-in-out
+    ${isOpen ? "translate-x-0" : "translate-x-full"}
+  `}
+  role="navigation"
+>
+  {sections.map(({ id, icon, labelKey }) => (
+    <a
+      key={id}
+      href={`#${id}`}
+      className="
+        flex items-center gap-3 text-white text-sm sm:text-base
+        hover:text-yellow-400 transition
+      "
+      onClick={() => setIsOpen(false)}
+    >
+      <span className="text-lg">{icon}</span>
+      <span>{t(labelKey)}</span>
+    </a>
+  ))}
+</div>
 
-      {/* Mobile Slide-out Menu */}
-      <div
-        className={`
-          fixed top-0 right-0 h-full w-3/4 sm:w-2/5 bg-black z-40
-          flex flex-col items-start pt-20 px-6 gap-6
-          transition-transform duration-300 ease-in-out
-          ${isOpen ? "translate-x-0" : "translate-x-full"}
-        `}
-      >
-        {sections.map(({ id, icon, labelKey }) => (
-          <a
-            key={id}
-            href={`#${id}`}
-            className="
-              flex items-center gap-3 text-white text-base
-              hover:text-yellow-400 transition
-              md:text-lg lg:text-lg xl:text-xl 2xl:text-2xl
-            "
-            onClick={() => setIsOpen(false)}
-          >
-            <span>{icon}</span>
-            <span>{t(labelKey)}</span>
-          </a>
-        ))}
-      </div>
+{/* Hamburger Button on Mobile */}
+<button
+  className="
+    fixed top-4 right-4 z-50 p-2 sm:p-3
+    text-white bg-black/60 rounded-md md:hidden
+  "
+  onClick={toggleMenu}
+  aria-label={isOpen ? "Close menu" : "Open menu"}
+  aria-expanded={isOpen}
+>
+  {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
+</button>
+
+
     </>
   );
 };

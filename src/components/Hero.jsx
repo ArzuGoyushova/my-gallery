@@ -16,61 +16,58 @@ const Hero = () => {
   const reduce = useReducedMotion();
 
   return (
-   <section
+  <section
   id="home"
-  className="w-full md:w-screen md:h-screen md:shrink-0 relative md:flex flex-row items-center md:justify-between px-6 md:px-24 lg:px-32 text-white"
+  className="container min-h-screen min-w-screen mx-auto flex flex-col md:flex-row items-center justify-around min-h-screen px-6 text-white"
 >
-      {/* Left: Wall Text */}
+  {/* Left: Text */}
+  <motion.div
+    className="w-full md:w-1/2 text-center md:text-left !mt-20 !md:mt-0"
+    variants={textVariant}
+    initial="hidden"
+    animate="visible"
+    {...(reduce && { transition: { duration: 0 } })}
+  >
+    <h1 className="text-2xl lg:text-4xl 2xl:text-6xl font-serif tracking-wide !mb-4 text-neutral-100 text-wrap">
+      {t("hero.welcome")}
+    </h1>
+    <p className="hidden md:block text-sm md:text-md lg:text-lg 2xl:text-xl text-neutral-300 leading-relaxed font-light border-l-4 border-yellow-600 pl-4 text-wrap">
+      {t("hero.desc")}
+    </p>
+  </motion.div>
+
+  {/* Right: Portrait */}
+  <motion.div
+    className="w-[80%] md:w-[50%] lg:w-[40%] xl:w-[19%] max-w-[800px] mx-auto md:mx-0 relative"
+    variants={imageWrapperVariant}
+    initial="hidden"
+    animate="visible"
+    {...(reduce && { transition: { duration: 0 } })}
+  >
+    <div className="rounded-md bg-gradient-to-br from-[#a97458] via-[#8B5E3C] to-[#5c3a22] p-[6px]">
       <motion.div
-        className="md:w-1/2 w-full p-12 md:p-6 md:text-start text-center"
-        variants={textVariant}
-        initial="hidden"
-        animate="visible"
-        {...(reduce && { transition: { duration: 0 } })}
+        className="bg-white p-3 rounded-md"
+        whileHover={!reduce ? { scale: 1.03 } : {}}
+        whileTap={!reduce ? { scale: 0.97 } : {}}
+        transition={{ type: "spring", stiffness: 250, damping: 20 }}
       >
-        <h1 className="ms-12 text-xl md:text-3xl xl:text-5xl 2xl:text-[6rem] leading-snug font-serif tracking-wide mb-4 text-neutral-100 text-wrap">
-          {t("hero.welcome")}
-        </h1>
-
-        <p className=" text-sm md:text-base xl:text-xl 2xl:text-3xl hidden md:block text-base  text-neutral-300 leading-relaxed font-light border-l-4 border-yellow-600 pl-4 text-wrap">
-          {t("hero.desc")}
-        </p>
+        <div className="aspect-[2/3] rounded-md overflow-hidden">
+          <img
+            src="assets/hero.png"
+            alt="Hero Portrait"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="mt-3 text-center text-neutral-700 text-sm md:text-base italic border-t border-gray-300 pt-3">
+          “The Digital Artisan”  
+          <br />
+          Portrait by Arzu, 2025
+        </div>
       </motion.div>
+    </div>
+  </motion.div>
+</section>
 
-      {/* Right: Framed Image with Light */}
-      <motion.div
-        className="md:w-1/2 w-full relative flex flex-col items-center md:-mt-12 md:mb-0 flex-shrink-0"
-        variants={imageWrapperVariant}
-        initial="hidden"
-        animate="visible"
-        {...(reduce && { transition: { duration: 0 } })}
-      >
-   <div className="w-[45vw] max-w-[800px] min-w-[150px] md:w-[20vw] mx-auto bg-neutral-900 shadow-xl rounded-md overflow-hidden">
-  <div className="rounded-md bg-gradient-to-br from-[#a97458] via-[#8B5E3C] to-[#5c3a22] p-[6px]">
-    <motion.div
-      className="bg-white p-3 rounded-sm"
-      whileHover={!reduce ? { scale: 1.03 } : {}}
-      whileTap={!reduce ? { scale: 0.97 } : {}}
-      transition={{ type: "spring", stiffness: 250, damping: 20 }}
-    >
-      <div className="aspect-[2/3] overflow-hidden rounded-sm">
-        <img
-          src="assets/hero.png"
-          alt="Hero Portrait"
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="mt-3 text-center text-neutral-700 md:text-md text-sm italic border-t border-gray-300 pt-3 px-2">
-        “The Digital Artisan”  
-        <br />
-        Portrait by Arzu, 2025
-      </div>
-    </motion.div>
-  </div>
-</div>
-
-      </motion.div>
-    </section>
   );
 };
 

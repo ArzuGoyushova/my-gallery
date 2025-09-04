@@ -125,9 +125,9 @@ const Tools = () => {
   ];
 
   return (
-    <section id="tools" className="min-h-screen w-screen shrink-0 px-10 py-16 text-white">
+    <section id="tools" className="min-h-screen w-screen shrink-0 px-10 pt-10 text-white">
       <motion.h1
-        className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 mb-4 text-center"
+        className="text-2xl lg:text-4xl 2xl:text-5xl font-bold text-yellow-400 mb-4 text-center"
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
@@ -145,12 +145,12 @@ const Tools = () => {
       >
         {/* TOOLS SECTION */}
         <motion.div className="md:w-1/3 w-full" variants={fadeUp}>
-          <h2 className="desc text-xl lg:text-3xl xl:text-5xl text-yellow-300 mb-2">{t("tools.tool")}</h2>
+          <h2 className="desc text-2xl 2xl:text-3xl text-yellow-300 mb-2">{t("tools.tool")}</h2>
           <div className="flex flex-wrap gap-2 ">
             {tools.map((tool, i) => (
               <motion.div
                 key={i}
-                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm md:text-base lg:text-lg xl:text-xl flex items-center gap-2"
+                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm md:text-base lg:text-lg  flex items-center gap-2"
                 whileHover={!reduce ? { scale: 1.05 } : {}}
                 transition={{ type: "spring", stiffness: 250, damping: 20 }}
               >
@@ -163,7 +163,7 @@ const Tools = () => {
 
         {/* CERTIFICATES */}
        <motion.div className="md:w-2/3 w-full" variants={fadeUp}>
-  <h2 className="desc text-2xl text-yellow-300 mb-6">🎓 {t("tools.cert")}</h2>
+  <h2 className="desc text-2xl 2xl:text-3xl text-yellow-300 mb-6">🎓 {t("tools.cert")}</h2>
   <Slider {...sliderSettings} className="certificates-slider">
     {certificates.map((cert, i) => (
       <motion.div

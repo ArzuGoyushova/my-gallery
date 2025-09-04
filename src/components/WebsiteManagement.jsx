@@ -48,7 +48,7 @@ const WebsiteManagement = () => {
   return (
     <section
       id="websiteManagement"
-      className=" w-full pt-6 px-4 sm:px-6 md:px-12 mt-4 lg:px-20 text-white shrink-0"
+      className=" w-screen pt-6 px-4 sm:px-6 md:px-12 mt-4 lg:px-20 text-white shrink-0"
     >
       <motion.div
         variants={fadeUp}
@@ -56,14 +56,14 @@ const WebsiteManagement = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h1 className="text-[1.75rem] sm:text-[2.5rem] md:text-[3.6rem] font-bold text-yellow-400 mb-2">
+        <h1 className="text-3xl 2xl:text-5xl font-bold text-yellow-400 mb-2">
           {t("website.title")}
         </h1>
 
         {/* Overview */}
        <div className="mb-6 max-w-3xl">
         <div className="py-1">
-  <p className="text-gray-300 text-sm md:text-base lg:text-lg xl:text-xl">{t("website.desc")}</p>
+  <p className="text-gray-300 text-sm md:text-base lg:text-lg xl:text-xl ">{t("website.desc")}</p>
   </div>
   <div className="py-1">
   <p className="text-yellow-300 text-sm md:text-base lg:text-lg xl:text-xl underline">
@@ -99,7 +99,7 @@ const WebsiteManagement = () => {
           {searchResults.map((result, i) => (
             <motion.div
               key={i}
-              className="bg-neutral-800 border border-yellow-500 rounded-md p-4 shadow-md flex flex-col sm:flex-row justify-between gap-3 w-full"
+              className="bg-neutral-800 border border-yellow-500 rounded-md p-4 shadow-md flex flex-col sm:flex-row justify-between gap-3 w-full md:w-[70%]"
               variants={fadeUp}
               whileHover={!reduce ? { scale: 1.02 } : {}}
               transition={{ type: "spring", stiffness: 220, damping: 20 }}
