@@ -228,7 +228,7 @@ Dizayn Yanaşması:
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
           >
             <motion.div
-              className="relative bg-neutral-900 text-white p-6 pt-10 rounded-xl h-[90vh] w-1/4 border border-yellow-400 shadow-lg mt-10 overflow-y-auto"
+              className="relative bg-neutral-900 text-white p-6 pt-10 rounded-xl h-[90vh] w-[90%] md:w-1/4 border border-yellow-400 shadow-lg mt-10 overflow-y-auto"
               initial={{ scale: 0.94, opacity: 0 }}
               animate={{
                 scale: 1,

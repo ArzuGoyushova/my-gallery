@@ -87,7 +87,6 @@ const Contact = () => {
                 key={i}
                 className="flex items-center gap-4 group"
                 whileHover={iconHover}
-                whileTap={{ scale: 0.2 }}
               >
                 <Icon className="text-yellow-300 text-xl" />
                 <a
