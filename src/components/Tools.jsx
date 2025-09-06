@@ -150,7 +150,7 @@ const Tools = () => {
             {tools.map((tool, i) => (
               <motion.div
                 key={i}
-                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm md:text-base lg:text-lg  flex items-center gap-2"
+                className="bg-yellow-100 text-black px-4 py-2 rounded-lg shadow-md text-sm md:text-base flex items-center gap-2"
                 whileHover={!reduce ? { scale: 1.05 } : {}}
                 transition={{ type: "spring", stiffness: 250, damping: 20 }}
               >

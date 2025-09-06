@@ -16,19 +16,19 @@
   "about": {
   "titles": {
     "title1": "Kontent və Kopiraytinq",
-    "title2": "Dizayn və Vizual Materiallar",
+    "title2": "Vizual Materiallar",
     "title3": "Kampaniyalar və Veb",
     "title4": "SEO"
   },
   "items": {
     "title1": ["Bloq Yazıları", "Paylaşım Mətnləri", "Video Ssenariləri", "Brend Dili"],
     "title2": ["Təqdimatlar", "Sillabuslar", "Stikerlər və Sertifikatlar", "Estetik Maketlər"],
-    "title3": ["Kampaniya Fikirləri", "Yaradıcı Briflər", "Vebsayt İdarəsi", "Kontentin Yüklənməsi"],
-    "title4": ["SEO Araşdırması", "Açar Söz Strategiyası", "On-Page Optimizasiya", "Meta Etiketlər və Təsvirlər"]
+    "title3": ["Kampaniya İdeyaları", "Yaradıcı Briflər", "Vebsayt İdarəsi", "Kontentin Yüklənməsi"],
+    "title4": ["SEO Araşdırması", "Açar Söz Strategiyası", "On-Page Optimizasiya", "Meta Tag-lər"]
   },
   "intro": {
     "curator": "Kuratorla Tanış Olun!",
-    "desc": "Mənim adım Arzudur — məqsədli kontent, vizual materiallar və strategiyalar hazırlayan rəqəmsal marketinq mütəxssisiyəm. Paylaşımlar üçün mətn, skript, təqdimat materialları və bloq yazılarının yaradılmasından tutmuş vebsaytların idarə olunması və SEO optimizasiyasına qədər — fikirləri icraata çevirir, brendləri auditoriyaları ilə birləşdirirəm."
+    "desc": "Mənim adım Arzudur — məqsədli kontent, vizual materiallar və strategiyalar hazırlayan marketinq mütəxəssisi olaraq çalışıram. Paylaşımlar üçün mətn, skript, təqdimat materialları və bloq yazılarının yaradılmasından tutmuş vebsaytların idarə olunması və SEO optimizasiyasına qədər — ideyaları icraata çevirir, brendləri auditoriyaları ilə birləşdirirəm."
   }
 },
 "content": {
@@ -67,9 +67,9 @@
   "head1": "YouTube-da Ən Çox Baxılan Video",
   "head2": "Bir Banner ilə Tam Qrup Yığımı",
   "head3": "SEO Açar Söz Nailiyyəti",
-  "desc1": "JET School üçün hazırladığım qısa video məktəbin YouTube kanalında bütün dövrlərin ən çox izlənilən videosuna çevrildi. Bu, 100-dən çox yeni abunəçinin əlavə olunmasına səbəb oldu və ümumi izləyici sayı 50% artdı.",
+  "desc1": "JET School üçün hazırladığım qısa video, YouTube-da kanalın ən çox izlənilən videosuna çevrildi. Bu, 100-dən çox yeni abunəçinin əlavə olunmasına səbəb oldu və ümumi izləyici sayı 50% artdı.",
   "desc2": "Süni İntellekt Mühəndisliyi kursu üçün hazırladığım tək bir banner iki tam qrupun formalaşmasına səbəb oldu. Canva dizaynı müxtəlif platformalarda istifadə olundu və qeydiyyata birbaşa təsir göstərdi.",
-  "desc3": "Strateji kontent yazılışı sayəsində JET School saytımız 'uşaqlar üçün proqramlaşdırma' və 'Scratch dərsləri Bakı' kimi açar sözlər üzrə Google-da ilk səhifədə yer aldı. Heç bir ödənişli reklam olmadan görünürlük qazandıq.",
+  "desc3": "Strateji kontent yazılışı sayəsində JET School saytımız 'uşaqlar üçün proqramlaşdırma' və 'Scratch dərsləri Bakı' kimi açar sözlər üzrə Google-da ilk səhifədə yer aldı. Heç bir ödənişli reklam istifadə olunmadan bu nailiyyət əldə edildi.",
   "button": "Mənbəyə baxın"
 },
 "contact": {

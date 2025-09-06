@@ -3,8 +3,11 @@ import { useTranslation } from "react-i18next";
 import { motion, useReducedMotion } from "framer-motion";
 
 const Contact = () => {
+  const { i18n } = useTranslation();
   const { t } = useTranslation();
   const reduce = useReducedMotion();
+
+  const cvLink = i18n.language === "az" ? "assets/contact/ArzuGöyüşovaCV.pdf" : "assets/contact/ArzuGoyushovaCV.pdf";
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -37,7 +40,7 @@ const Contact = () => {
       className="min-h-screen min-w-screen flex flex-col items-center py-18 px-6 text-white shrink-0"
     >
       <motion.h1
-        className="md:text-[3.6rem] text-[2rem] font-bold text-yellow-400 !mb-10"
+        className="text-2xl lg:text-4xl 2xl:text-5xl font-bold text-yellow-400 !mb-6 text-center"
         initial="hidden"
         animate="visible"
         variants={itemVariants}
@@ -53,7 +56,7 @@ const Contact = () => {
       >
         {/* Left Card */}
         <motion.div
-          className="w-full md:w-1/3 bg-neutral-800 p-6 rounded-xl border border-yellow-400 shadow-md"
+          className="w-full md:w-1/3 bg-neutral-800 p-6 rounded-xl flex flex-col items-center border border-yellow-400 shadow-md"
           variants={itemVariants}
         >
           <img
@@ -81,7 +84,7 @@ const Contact = () => {
               { icon: FaEnvelope, href: "mailto:arzugoyushova16@gmail.com", text: "arzugoyushova16@gmail.com" },
               { icon: FaLinkedin, href: "https://www.linkedin.com/in/arzugoyushova/", text: "linkedin.com/in/arzugoyushova" },
               { icon: FaRegStickyNote, href: "https://www.notion.so/Weekly-Blog-Planner-2349fcf27599801e9da9e3268d1a8238?source=copy_link", text: "notion.so/arzugoyushova" },
-              { icon: FaFileAlt, href: "/cv.pdf", text: t("contact.CVbutton"), isFile: true }
+              { icon: FaFileAlt, href: cvLink, text: t("contact.CVbutton"), isFile: true },
             ].map(({ icon: Icon, href, text, isFile }, i) => (
               <motion.div
                 key={i}
@@ -90,12 +93,12 @@ const Contact = () => {
               >
                 <Icon className="text-yellow-300 text-xl" />
                 <a
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-blue-400 group-hover:underline"
-                  {...(isFile ? { download: true } : {})}
-                >
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-blue-400 group-hover:underline"
+            {...(isFile ? { download: true } : {})}
+          >
                   {text}
                 </a>
               </motion.div>

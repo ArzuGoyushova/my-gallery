@@ -44,27 +44,21 @@ const Hero = () => {
     animate="visible"
     {...(reduce && { transition: { duration: 0 } })}
   >
-    <div className="rounded-md bg-gradient-to-br from-[#a97458] via-[#8B5E3C] to-[#5c3a22] p-[6px]">
+   
       <motion.div
-        className="bg-white p-3 rounded-md"
+        className="rounded-md"
         whileHover={!reduce ? { scale: 1.03 } : {}}
         whileTap={!reduce ? { scale: 0.97 } : {}}
         transition={{ type: "spring", stiffness: 250, damping: 20 }}
       >
         <div className="aspect-[2/3] rounded-md overflow-hidden">
           <img
-            src="assets/hero.png"
+            src="assets/hero1c.png"
             alt="Hero Portrait"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="mt-3 text-center text-neutral-700 text-sm md:text-base italic border-t border-gray-300 pt-3">
-          “The Digital Artisan”  
-          <br />
-          Portrait by Arzu, 2025
-        </div>
       </motion.div>
-    </div>
   </motion.div>
 </section>
 

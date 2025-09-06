@@ -63,10 +63,10 @@ const WebsiteManagement = () => {
         {/* Overview */}
        <div className="mb-6 max-w-3xl">
         <div className="py-1">
-  <p className="text-gray-300 text-sm md:text-base lg:text-lg xl:text-xl ">{t("website.desc")}</p>
+  <p className="text-gray-300 text-sm md:text-base lg:text-lg ">{t("website.desc")}</p>
   </div>
   <div className="py-1">
-  <p className="text-yellow-300 text-sm md:text-base lg:text-lg xl:text-xl underline">
+  <p className="text-yellow-300 text-sm md:text-base lg:text-lg underline">
     <a href="https://jetschool.az" target="_blank" rel="noreferrer">
       {t("website.visit")}
     </a>
@@ -90,12 +90,12 @@ const WebsiteManagement = () => {
           <h2 className="md:text-base lg:text-lg xl:text-2xl text-yellow-300 flex items-center gap-2">
             <FaSearch /> {t("website.google")}
           </h2>
-          <p className="text-sm md:text-base lg:text-lg  text-gray-400 sm:ml-4 display:block">
+          <p className="text-sm md:text-base lg:text-lg text-gray-400 sm:ml-4 display:block">
             {t("website.google-desc")}
           </p>
         </motion.div>
 
-        <div className="!space-y-4">
+        <div className="!space-y-2">
           {searchResults.map((result, i) => (
             <motion.div
               key={i}
