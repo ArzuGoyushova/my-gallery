@@ -16,7 +16,7 @@ const LanguageSwitcher = () => {
   const displayLang = currentLang === "az" ? "AZE" : "ENG";
 
   return (
-    <div className="relative hidden md:block pt-2">
+    <div className="relative md:block pt-2">
       <button
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className="
